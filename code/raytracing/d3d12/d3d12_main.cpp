@@ -173,15 +173,15 @@ void GL_InitRaytracing(int width, int height) {
 	// set of DXIL libraries. We chose to separate the code in several libraries
 	// by semantic (ray generation, hit, miss) for clarity. Any code layout can be
 	// used.
-	m_rayGenLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/RayGen.hlsl");
-	m_missLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/Miss.hlsl");
-	m_hitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/Hit.hlsl");
-	m_anyHitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/AnyHit.hlsl");
+	m_rayGenLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/RayGen.hlsl");
+	m_missLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/Miss.hlsl");
+	m_hitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/Hit.hlsl");
+	m_anyHitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/AnyHit.hlsl");
 	// #DXR Extra - Another ray type
-	m_shadowLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/ShadowRay.hlsl");
+	m_shadowLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/ShadowRay.hlsl");
 	pipeline.AddLibrary(m_shadowLibrary.Get(),{ L"ShadowClosestHit", L"ShadowMiss" });
 
-	m_secondHitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"baseq3/shaders/HitSecond.hlsl");
+	m_secondHitLibrary = nv_helpers_dx12::CompileShaderLibrary(L"duke4/shaders/HitSecond.hlsl");
 	pipeline.AddLibrary(m_secondHitLibrary.Get(), { L"SecondClosestHit", L"SecondMiss" });
 
 	// In a way similar to DLLs, each library is associated with a number of

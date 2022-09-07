@@ -2393,7 +2393,7 @@ void Com_Init( char *commandLine ) {
 
 	// skip the q3config.cfg if "safe" is on the command line
 	if ( !Com_SafeMode() ) {
-		Cbuf_AddText ("exec quakeconfig.cfg\n");
+		Cbuf_AddText ("exec dukeconfig.cfg\n");
 	}
 
 	Cbuf_AddText ("exec autoexec.cfg\n");
@@ -2543,7 +2543,7 @@ void Com_WriteConfiguration( void ) {
 	}
 	cvar_modifiedFlags &= ~CVAR_ARCHIVE;
 
-	Com_WriteConfigToFile( "quakeconfig.cfg" );
+	Com_WriteConfigToFile( "dukeconfig.cfg" );
 
 	// bk001119 - tentative "not needed for dedicated"
 #ifndef DEDICATED
@@ -2551,7 +2551,7 @@ void Com_WriteConfiguration( void ) {
 	if (UI_usesUniqueCDKey() && fs && fs->string[0] != 0) {
 		Com_WriteCDKey( fs->string, &cl_cdkey[16] );
 	} else {
-		Com_WriteCDKey( "baseq3", cl_cdkey );
+		Com_WriteCDKey( "duke4", cl_cdkey );
 	}
 #endif
 }

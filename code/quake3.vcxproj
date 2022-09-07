@@ -146,7 +146,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dxcompiler.lib;dxgi.lib;d3d12.lib;winmm.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../quake.exe</OutputFile>
+      <OutputFile>../DukeNukem4.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Debug/quake3.pdb</ProgramDatabaseFile>
@@ -234,7 +234,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>dxcompiler.lib;dxgi.lib;d3d12.lib;winmm.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../Darklight.exe</OutputFile>
+      <OutputFile>../DukeForever.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>.\Release/quake3.pdb</ProgramDatabaseFile>

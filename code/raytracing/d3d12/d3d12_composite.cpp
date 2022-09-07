@@ -32,7 +32,7 @@ void GL_InitCompositePass(tr_texture* albedoPass, tr_texture* lightPass, tr_text
 	{
 		Com_Printf("Loading Blur compute shader...\n");
 		// Open and read the file
-		std::ifstream shaderFile("baseq3/compute/blur.hlsl");
+		std::ifstream shaderFile("duke4/compute/blur.hlsl");
 		if (shaderFile.good() == false)
 		{
 			throw std::logic_error("Cannot find shader file");

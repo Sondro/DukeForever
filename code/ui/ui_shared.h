@@ -34,7 +34,7 @@ If you have questions concerning this license or the applicable additional terms
 #include "../renderer/tr_public.h"
 #include "keycodes.h"
 
-#include "../../baseq3/ui/menudef.h"
+#include "../../duke4/ui/menudef.h"
 
 #define MAX_MENUNAME 32
 #define MAX_ITEMTEXT 64

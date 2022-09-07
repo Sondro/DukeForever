@@ -2120,9 +2120,9 @@ void CL_InitRenderer( void ) {
 	re.BeginRegistration( &cls.glconfig );
 
 	// load character sets
-	cls.charSetShader = re.RegisterShader( "gfx/conchars" );
+	cls.charSetShader = re.RegisterShader( "ui/textures/conchars" );
 	cls.whiteShader = re.RegisterShader( "white" );
-	cls.consoleShader = re.RegisterShader( "gfx/conback" );
+	cls.consoleShader = re.RegisterShader( "ui/textures/conback" );
 	g_console_field_width = cls.glconfig.vidWidth / SMALLCHAR_WIDTH - 2;
 	g_consoleField.widthInChars = g_console_field_width;
 }

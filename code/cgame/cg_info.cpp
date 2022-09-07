@@ -161,7 +161,7 @@ void CG_DrawInformation( void ) {
 	s = Info_ValueForKey( info, "mapname" );
 
 
-	levelshot = engine->renderer->RegisterShaderNoMip("gfx/loadback");
+	levelshot = engine->renderer->RegisterShaderNoMip("ui/textures/loadback");
 	engine->renderer->SetColor( NULL );
 	CG_DrawPic( 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, levelshot );
 }

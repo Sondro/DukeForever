@@ -26,7 +26,7 @@ void GL_InitClearPass(tr_texture* lightPass) {
 	{
 		Com_Printf("Loading clear compute shader...\n");
 		// Open and read the file
-		std::ifstream shaderFile("baseq3/compute/clear.hlsl");
+		std::ifstream shaderFile("duke4/compute/clear.hlsl");
 		if (shaderFile.good() == false)
 		{
 			throw std::logic_error("Cannot find shader file");

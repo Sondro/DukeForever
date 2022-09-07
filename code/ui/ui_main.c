@@ -5092,7 +5092,7 @@ static void UI_SortServerStatusInfo( serverStatusInfo_t *info ) {
 	int i, j, index;
 	char *tmp1, *tmp2;
 
-	// FIXME: if "gamename" == "baseq3" or "missionpack" then
+	// FIXME: if "gamename" == "duke4" or "missionpack" then
 	// replace the gametype number by FFA, CTF etc.
 	//
 	index = 0;

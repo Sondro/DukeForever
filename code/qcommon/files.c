@@ -69,7 +69,7 @@ along with "home path" and "cd path" for game content.
 
 
 The "base game" is the directory under the paths where data comes from by default, and
-can be either "baseq3" or "demoq3".
+can be either "duke4" or "demoq3".
 
 The "current game" may be the same as the base game, or it may be the name of another
 directory under the paths that should be searched for files before looking in the base game.
@@ -115,8 +115,8 @@ calls to FS_AddGameDirectory
 Additionaly, we search in several subdirectories:
 current game is the current mode
 base game is a variable to allow mods based on other mods
-(such as baseq3 + missionpack content combination in a mod for instance)
-BASEGAME is the hardcoded base game ("baseq3")
+(such as duke4 + missionpack content combination in a mod for instance)
+BASEGAME is the hardcoded base game ("duke4")
 
 e.g. the qpath "sound/newstuff/test.wav" would be searched for in the following places:
 
@@ -222,9 +222,9 @@ typedef struct fileInPack_s {
 } fileInPack_t;
 
 typedef struct {
-	char			pakFilename[MAX_OSPATH];	// c:\quake3\baseq3\pak0.pk3
+	char			pakFilename[MAX_OSPATH];	// c:\quake3\duke4\pak0.pk3
 	char			pakBasename[MAX_OSPATH];	// pak0
-	char			pakGamename[MAX_OSPATH];	// baseq3
+	char			pakGamename[MAX_OSPATH];	// duke4
 	unzFile			handle;						// handle to zip file
 	int				checksum;					// regular checksum
 	int				pure_checksum;				// checksum for pure
@@ -237,7 +237,7 @@ typedef struct {
 
 typedef struct {
 	char		path[MAX_OSPATH];		// c:\quake3
-	char		gamedir[MAX_OSPATH];	// baseq3
+	char		gamedir[MAX_OSPATH];	// duke4
 } directory_t;
 
 typedef struct searchpath_s {
@@ -2151,7 +2151,7 @@ static char** Sys_ConcatenateFileLists( char **list0, char **list1, char **list2
 FS_GetModList
 
 Returns a list of mod directory names
-A mod directory is a peer to baseq3 with a pk3 in it
+A mod directory is a peer to duke4 with a pk3 in it
 The directories are searched in base path, cd path and home path
 ================
 */
@@ -2198,8 +2198,8 @@ int	FS_GetModList( char *listbuf, int bufsize ) {
     if (bDrop) {
       continue;
     }
-    // we drop "baseq3" "." and ".."
-    if (Q_stricmp(name, "baseq3") && Q_stricmpn(name, ".", 1)) {
+    // we drop "duke4" "." and ".."
+    if (Q_stricmp(name, "duke4") && Q_stricmpn(name, ".", 1)) {
       // now we need to find some .pk3 files to validate the mod
       // NOTE TTimo: (actually I'm not sure why .. what if it's a mod under developement with no .pk3?)
       // we didn't keep the information when we merged the directory names, as to what OS Path it was found under
@@ -2628,7 +2628,7 @@ qboolean FS_ComparePaks( char *neededpaks, int len, qboolean dlstring ) {
 		havepak = qfalse;
 
 		// never autodownload any of the id paks
-		if ( FS_idPak(fs_serverReferencedPakNames[i], "baseq3") || FS_idPak(fs_serverReferencedPakNames[i], "missionpack") ) {
+		if ( FS_idPak(fs_serverReferencedPakNames[i], "duke4") || FS_idPak(fs_serverReferencedPakNames[i], "missionpack") ) {
 			continue;
 		}
 
@@ -2839,7 +2839,7 @@ static void FS_Startup( const char *gameName ) {
 		}
 	}
 
-	Com_ReadCDKey( "baseq3" );
+	Com_ReadCDKey( "duke4" );
 	fs = Cvar_Get ("fs_game", "", CVAR_INIT|CVAR_SYSTEMINFO );
 	if (fs && fs->string[0] != 0) {
 		Com_AppendCDKey( fs->string );
@@ -3083,7 +3083,7 @@ const char *FS_ReferencedPakNames( void ) {
 	info[0] = 0;
 
 	// we want to return ALL pk3's from the fs_game path
-	// and referenced one's from baseq3
+	// and referenced one's from duke4
 	for ( search = fs_searchpaths ; search ; search = search->next ) {
 		// is the element a pak file?
 		if ( search->pack ) {
@@ -3314,7 +3314,7 @@ void FS_Restart( int checksumFeed ) {
 	if ( Q_stricmp(fs_gamedirvar->string, lastValidGame) ) {
 		// skip the q3config.cfg if "safe" is on the command line
 		if ( !Com_SafeMode() ) {
-			Cbuf_AddText ("exec quakeconfig.cfg\n");
+			Cbuf_AddText ("exec dukeconfig.cfg\n");
 		}
 	}
 
