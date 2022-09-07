@@ -458,6 +458,11 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
 		// swap all the triangles
 		tri = (md3Triangle_t *) ( (byte *)surf + surf->ofsTriangles );
 		for ( j = 0 ; j < surf->numTriangles ; j++, tri++ ) {
+			md3Triangle_t newTri = *tri;
+
+			tri->indexes[2] = newTri.indexes[0];
+			tri->indexes[0] = newTri.indexes[2];
+
 			LL(tri->indexes[0]);
 			LL(tri->indexes[1]);
 			LL(tri->indexes[2]);
@@ -468,6 +473,8 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
         for ( j = 0 ; j < surf->numVerts ; j++, st++ ) {
             st->st[0] = LittleFloat( st->st[0] );
             st->st[1] = LittleFloat( st->st[1] );
+
+		//	st->st[1] = 1.0 - st->st[1];
         }
 
 		// swap all the XyzNormals

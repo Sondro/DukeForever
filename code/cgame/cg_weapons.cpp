@@ -646,7 +646,7 @@ void CG_RegisterWeapon( int weaponNum ) {
 		break;
 	case WP_SHOTGUN:
 		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_shot.md3");
+		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/shotgun/shotgun.md3");
 		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");		
 		break;
 
