@@ -437,17 +437,10 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
 					shader->shaderIndex = globalCustomShader;
 				}
 				else if (sh->defaultShader) {
-					if (!defaultShader->defaultShader)
-					{
-						shader->shaderIndex = defaultShader->index;
-					}
-					else
-					{
-						COM_StripExtension(mod_name, shaderName);
-						COM_DefaultExtension(shaderName, sizeof(shaderName), va("_%d.tga", i));
-						defaultShader = R_FindShader(shaderName, -1, qfalse);
-						shader->shaderIndex = defaultShader->index;
-					}
+					COM_StripExtension(mod_name, shaderName);
+					COM_DefaultExtension(shaderName, sizeof(shaderName), va("_%d.tga", i));
+					defaultShader = R_FindShader(shaderName, -1, qfalse);
+					shader->shaderIndex = defaultShader->index;
 				}
 				else {
 					shader->shaderIndex = sh->index;
@@ -474,7 +467,8 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
             st->st[0] = LittleFloat( st->st[0] );
             st->st[1] = LittleFloat( st->st[1] );
 
-		//	st->st[1] = 1.0 - st->st[1];
+			//st->st[0] = 1.0 - st->st[0];
+			st->st[1] = 1.0 - st->st[1];
         }
 
 		// swap all the XyzNormals
