@@ -312,7 +312,11 @@ static void CG_DrawCenterString(void) {
 }
 
 
-
+#if 1
+void CG_DrawStatusBar(void) {
+	CG_DrawPic(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, cgs.media.hudBackgroundShader);
+}
+#else
 void CG_DrawStatusBar(void) {
 	int			color;
 	centity_t* cent;
@@ -434,3 +438,4 @@ void CG_DrawStatusBar(void) {
 
 	CG_DrawCenterString();
 }
+#endif

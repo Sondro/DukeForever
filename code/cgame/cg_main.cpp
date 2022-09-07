@@ -812,6 +812,8 @@ static void CG_RegisterGraphics( void ) {
 	FX_InitGibs();
 // jmarshall end
 
+	cgs.media.hudBackgroundShader = engine->renderer->RegisterShader("ui/textures/hud_back");
+
 	for ( i=0 ; i<11 ; i++) {
 		cgs.media.numberShaders[i] = engine->renderer->RegisterShader( sb_nums[i] );
 	}
@@ -1875,8 +1877,8 @@ void CG_Init( int serverMessageNum, int serverCommandSequence, int clientNum ) {
 
 	// get the rendering configuration from the client system
 	engine->CL_GetGlconfig( &cgs.glconfig );
-	cgs.screenXScale = cgs.glconfig.vidWidth / 640.0;
-	cgs.screenYScale = cgs.glconfig.vidHeight / 480.0;
+	cgs.screenXScale = cgs.glconfig.vidWidth / ((float)SCREEN_WIDTH);
+	cgs.screenYScale = cgs.glconfig.vidHeight / ((float)SCREEN_HEIGHT);
 
 	// get the gamestate from the client system
 	engine->CL_GetGameState( &cgs.gameState );
