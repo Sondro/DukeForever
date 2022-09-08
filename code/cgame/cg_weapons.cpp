@@ -638,6 +638,9 @@ void CG_RegisterWeapon( int weaponNum ) {
 
 	weaponInfo->loopFireSound = qfalse;
 
+	weaponInfo->animations[WEAPON_ANIMATION_NONE].endFrame = -1;
+	weaponInfo->animations[WEAPON_ANIMATION_NONE].startFrame = -1;
+
 	switch ( weaponNum ) {
 	case WP_AXE:
 		MAKERGB( weaponInfo->flashDlightColor, 0.6f, 0.6f, 1.0f );
@@ -647,7 +650,9 @@ void CG_RegisterWeapon( int weaponNum ) {
 	case WP_SHOTGUN:
 		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
 		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/shotgun/shotgun.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");		
+		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");	
+		weaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = 122;
+		weaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = 148;		
 		break;
 
 	case WP_SUPER_SHOTGUN:
@@ -947,9 +952,9 @@ void CG_AddPlayerWeapon( refEntity_t *parent, playerState_t *ps, centity_t *cent
 	if (cent->fireWeaponAnim) {
 		gun.oldframe = max(cent->weaponFrame - 1, 0);
 		gun.frame = cent->weaponFrame;
-		cent->weaponFrame++;
+		cent->weaponFrame += cg.deltaTime;
 
-		if (cent->weaponFrame >= engine->renderer->ModelNumFrames(gun.hModel)) {
+		if (cent->weaponFrame >= weapon->animations[WEAPON_ANIMATION_FIRE].endFrame) {
 			cent->weaponFrame = 0;
 			cent->fireWeaponAnim = qfalse;
 		}
@@ -1385,7 +1390,7 @@ void CG_FireWeapon( centity_t *cent ) {
 	cent->muzzleFlashTime = cg.time;
 
 	cent->fireWeaponAnim = qtrue;
-	cent->weaponFrame = 0;
+	cent->weaponFrame = weap->animations[WEAPON_ANIMATION_FIRE].startFrame;
 
 	// lightning gun only does this this on initial press
 	if ( ent->weapon == WP_LIGHTNING ) {

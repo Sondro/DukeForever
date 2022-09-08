@@ -180,7 +180,7 @@ typedef struct centity_s {
 	int				teleportFlag;
 
 	qboolean		fireWeaponAnim;
-	int				weaponFrame;
+	float			weaponFrame;
 
 	int				trailTime;		// so missile trails can handle dropped initial packets
 	int				dustTrailTime;
@@ -390,12 +390,20 @@ typedef enum {
 	BEAM_LIGHTNING2
 } beamType_t;
 
+typedef struct weaponAnimationInfo_s {
+	int startFrame;
+	int endFrame;
+} weaponAnimationInfo_t;
+
 
 // each WP_* weapon enum has an associated weaponInfo_t
 // that contains media references necessary to present the
 // weapon and its effects
 typedef struct weaponInfo_s {
 	qboolean		registered;
+
+	weaponAnimationType_t currentWeaponAnimation;
+	weaponAnimationInfo_t animations[NUM_WEAPON_ANIMATIONS];
 	
 	qhandle_t		weaponModel;
 
@@ -459,6 +467,9 @@ typedef struct {
 	int			clientFrame;		// incremented each frame
 
 	int			clientNum;
+
+	int			lastServerTime;
+	float		deltaTime;
 	
 	qboolean	demoPlayback;
 	qboolean	levelShot;			// taking a level menu screenshot
@@ -1551,3 +1562,4 @@ extern "C" {
 };
 
 extern cgameImport_t* engine;
+extern pmove_t		cg_pmove;

@@ -644,6 +644,12 @@ typedef enum {
 							// this avoids having to set eFlags and eventNum
 } entityType_t;
 
+typedef enum {
+	WEAPON_ANIMATION_NONE = 0,
+	WEAPON_ANIMATION_FIRE,
+	WEAPON_ANIMATION_RELOAD,
+	NUM_WEAPON_ANIMATIONS
+} weaponAnimationType_t;
 
 
 void	BG_EvaluateTrajectory( const trajectory_t *tr, int atTime, vec3_t result );

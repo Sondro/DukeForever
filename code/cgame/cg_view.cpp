@@ -878,7 +878,8 @@ void CG_DrawActiveFrame( int serverTime, stereoFrame_t stereoView, qboolean demo
 		CG_Printf( "cg.clientFrame:%i\n", cg.clientFrame );
 	}
 
-
+	cg.deltaTime = (cg_pmove.cmd.serverTime - cg.lastServerTime) * 0.025f;
+	cg.lastServerTime = cg_pmove.cmd.serverTime;
 }
 
 

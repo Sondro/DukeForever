@@ -106,3 +106,9 @@
 "classname" "light"
 "origin" "-72 24 136"
 }
+// entity 3
+{
+"classname" "misc_model"
+"origin" "0 96 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
