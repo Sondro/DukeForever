@@ -25,8 +25,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include "g_local.h"
 
-static	vec3_t	forward, right, up;
-static  vec3_t	muzzle;
+vec3_t	forward, right, up;
+vec3_t	muzzle;
 
 #define NUM_NAILSHOTS 15
 
@@ -334,7 +334,7 @@ void ShotgunPattern(int count, float spreadx, float spready, vec3_t origin, vec3
 	}
 }
 
-
+#if 0
 void weapon_supershotgun_fire (gentity_t *ent) {
 	gentity_t		*tent;
 
@@ -552,7 +552,7 @@ void weapon_railgun_fire (gentity_t *ent) {
 	}
 
 }
-
+#endif
 
 /*
 ======================================================================
@@ -594,6 +594,7 @@ void Weapon_HookThink (gentity_t *ent)
 	VectorCopy( ent->r.currentOrigin, ent->parent->client->ps.grapplePoint);
 }
 
+#if 0
 /*
 ======================================================================
 
@@ -727,7 +728,20 @@ void weapon_proxlauncher_fire (gentity_t *ent) {
 #endif
 
 //======================================================================
+#endif
 
+void G_SpawnShotgunFire(gentity_t* self) {
+	gentity_t* tent;
+
+	// send shotgun blast
+	tent = G_TempEntity(muzzle, EV_SHOTGUN);
+	VectorScale(forward, 4096, tent->s.origin2);
+	SnapVector(tent->s.origin2);
+	tent->s.eventParm = rand() & 255;		// seed for spread pattern
+	tent->s.otherEntityNum = self->s.number;
+
+	ShotgunPattern(6, 0.04, 0.04, tent->s.pos.trBase, tent->s.origin2, tent->s.eventParm, self);
+}
 
 /*
 ===============
@@ -810,72 +824,6 @@ void CalcMuzzlePointOrigin ( gentity_t *ent, vec3_t origin, vec3_t forward, vec3
 	VectorMA( muzzlePoint, 14, forward, muzzlePoint );
 	// snap to integer coordinates for more efficient network bandwidth usage
 	SnapVector( muzzlePoint );
-}
-
-
-
-/*
-===============
-FireWeapon
-===============
-*/
-void FireWeapon( gentity_t *ent ) {
-#ifdef MISSIONPACK
-	if( ent->client->persistantPowerup && ent->client->persistantPowerup->item && ent->client->persistantPowerup->item->giTag == PW_DOUBLER ) {
-		s_quadFactor *= 2;
-	}
-#endif
-
-	// track shots taken for accuracy tracking.  Grapple is not a weapon and gauntet is just not tracked
-	if( ent->s.weapon != WP_AXE ) {
-#ifdef MISSIONPACK
-		if( ent->s.weapon == WP_NAILGUN ) {
-			ent->client->accuracy_shots += NUM_NAILSHOTS;
-		} else {
-			ent->client->accuracy_shots++;
-		}
-#else
-		ent->client->accuracy_shots++;
-#endif
-	}
-
-	// set aiming directions
-	AngleVectors (ent->client->ps.viewangles, forward, right, up);
-
-	CalcMuzzlePointOrigin ( ent, ent->client->oldOrigin, forward, right, up, muzzle );
-
-	// fire the specific weapon
-	switch( ent->s.weapon ) {
-	case WP_AXE:
-		Weapon_Gauntlet( ent );
-		break;
-	case WP_PISTOL:
-		weapon_pistol_fire(ent);
-		break;
-	case WP_SHOTGUN:
-		weapon_shotgun_fire(ent);
-		break;
-	case WP_SUPER_SHOTGUN:
-		weapon_supershotgun_fire( ent );
-		break;
-	case WP_NAILGUN:
-		Weapon_Nailgun_Fire(ent, 1);
-		break;
-	case WP_SUPER_NAILGUN:
-		Weapon_Nailgun_Fire(ent, 1);
-		break;
-
-	case WP_GRENADE_LAUNCHER:
-		weapon_grenadelauncher_fire( ent );
-		break;
-	case WP_ROCKET_LAUNCHER:
-		Weapon_RocketLauncher_Fire( ent );
-		break;
-	
-	default:
-// FIXME		G_Error( "Bad ent->s.weapon" );
-		break;
-	}
 }
 
 

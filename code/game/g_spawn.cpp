@@ -233,7 +233,7 @@ void monster_ogre(gentity_t* self);
 void monster_ogre_marksman(gentity_t* self);
 void monster_dog(gentity_t* self);
 void monster_army(gentity_t* self);
-void monster_zombie(gentity_t* self);
+//void monster_zombie(gentity_t* self);
 void monster_knight(gentity_t* self);
 void monster_demon1(gentity_t* self);
 
@@ -342,7 +342,7 @@ spawn_t	spawns[] = {
 
 	{"monster_dog", monster_dog},
 	{"monster_army", monster_army},
-	{"monster_zombie", monster_zombie},
+	//{"monster_zombie", monster_zombie},
 	{"monster_ogre", monster_ogre},
 	{ "monster_demon1", monster_demon1 },
 	{ "monster_knight", monster_knight },

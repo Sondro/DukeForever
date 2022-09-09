@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 #define GENERATED_SUPERSCRIPT 1
 #include "../../splines/math_vector.h"
 #include "../../game/g_local.h "

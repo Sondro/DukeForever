@@ -301,24 +301,6 @@ typedef enum {
 	HI_NUM_HOLDABLE
 } holdable_t;
 
-
-typedef enum {
-	WP_NONE,
-
-	WP_AXE,
-	WP_PISTOL,
-	WP_SHOTGUN,
-	WP_SUPER_SHOTGUN,
-	WP_NAILGUN,
-	WP_SUPER_NAILGUN,
-	WP_ROCKET_LAUNCHER,
-	WP_GRENADE_LAUNCHER,	
-	WP_LIGHTNING,	
-
-	WP_NUM_WEAPONS
-} weapon_t;
-
-
 // reward sounds (stored in ps->persistant[PERS_PLAYEREVENTS])
 #define	PLAYEREVENT_DENIEDREWARD		0x0001
 #define	PLAYEREVENT_GAUNTLETREWARD		0x0002
@@ -717,3 +699,4 @@ static char* predef_lightstyles[] = {
 	"abcdefghijklmnopqrrqponmlkjihgfedcba"
 };
 
+#include "../superscript/sharedgenerated/generated_bggame_global.h"

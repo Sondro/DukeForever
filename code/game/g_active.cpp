@@ -869,7 +869,7 @@ void ClientThink_real( gentity_t *ent ) {
 
 	// check for the hit-scan gauntlet, don't let the action
 	// go through as an attack unless it actually hits something
-	if ( client->ps.weapon == WP_AXE && !( ucmd->buttons & BUTTON_TALK ) &&
+	if ( client->ps.weapon == WEAPON_MIGHTYFOOT && !( ucmd->buttons & BUTTON_TALK ) &&
 		( ucmd->buttons & BUTTON_ATTACK ) && client->ps.weaponTime <= 0 ) {
 		pm.gauntletHit = CheckGauntletAttack( ent );
 	}

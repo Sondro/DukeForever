@@ -16,8 +16,11 @@
     <None Include="knight.qc" />
     <None Include="map_zoo.qc" />
     <None Include="ogre.qc" />
+    <None Include="weapon_mightyfoot.qc" />
+    <None Include="weapon_pistol.qc" />
+    <None Include="weapon_rpg.qc" />
+    <None Include="weapon_shotgun.qc" />
     <None Include="soldier.qc" />
-    <None Include="zombie.qc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generated\generated_demon.cpp" />
@@ -26,18 +29,19 @@
     <ClCompile Include="generated\generated_map_zoo.cpp" />
     <ClCompile Include="generated\generated_ogre.cpp" />
     <ClCompile Include="generated\generated_soldier.cpp" />
-    <ClCompile Include="generated\generated_zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clientgenerated\generated_cgame_global.h" />
     <ClInclude Include="generated\anim_public.h" />
     <ClInclude Include="generated\generated_demon.h" />
     <ClInclude Include="generated\generated_dog.h" />
+    <ClInclude Include="generated\generated_game_global.h" />
     <ClInclude Include="generated\generated_knight.h" />
     <ClInclude Include="generated\generated_map_zoo.h" />
     <ClInclude Include="generated\generated_ogre.h" />
     <ClInclude Include="generated\generated_soldier.h" />
-    <ClInclude Include="generated\generated_zombie.h" />
     <ClInclude Include="generated\save_func.h" />
+    <ClInclude Include="sharedgenerated\generated_bggame_global.h" />
     <ClInclude Include="superscript.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

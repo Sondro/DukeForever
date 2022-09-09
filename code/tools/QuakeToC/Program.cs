@@ -19,6 +19,8 @@ namespace QuakeToC
             text += "// This auto generated file is released under the GPL license, please see code_license.txt\n";
             text += "// \n\n";
 
+            text += "#pragma once\n\n";
+
             return text;
         }
 
@@ -112,6 +114,117 @@ namespace QuakeToC
             body = body.Replace("self->solid = SOLID_NOT;", "\tself->r.contents = 0;\n\tengine->SV_LinkEntity(self);\n");
             body = body.Replace("self->solid = SOLID_SLIDEBOX;", "\tself->r.contents = CONTENTS_SOLID;\n\tengine->SV_LinkEntity(self);\n");
             return body;
+        }
+
+        static void WriteWeaponHeader(string serverGeneratedHeader, string clientGeneratedHeader, string sharedGeneratedHeader, List<QCfile> qcFiles)
+        {
+            string servertext = GetFileHeader();
+
+            servertext += "__forceinline void SP_ammo_touch(gentity_t* self, gentity_t* other, trace_t* trace) {\n";
+            servertext += "\tplayerState_t* ps;\n";
+            servertext += "\tif (other->client == NULL) { return; }\n";
+            servertext += "\tif (other->health <= 0) { return; }\n";
+            servertext += "\tps = &other->client->ps;\n";
+
+            servertext += "\tswitch (self->itemWeapon) {";
+            for (int i = 0; i < qcFiles.Count; i++)
+            {
+                servertext += string.Format("\t\tcase {0}:\n", qcFiles[i].weaponId);
+                servertext += string.Format("\t\t\tif (ps->ammo[{0}] >= {1}) {{ return; }}\n", qcFiles[i].weaponId, qcFiles[i].WEAPON_MAX_AMMO);
+                servertext += string.Format("\t\t\tps->ammo[{0}] = min(ps->ammo[{0}] + {1}, {2});\n", qcFiles[i].weaponId, qcFiles[i].WEAPON_AMMO_TOUCH, qcFiles[i].WEAPON_MAX_AMMO);
+                servertext += string.Format("\t\tbreak;\n");
+            }
+
+            servertext += "\t}\n";
+            servertext += "\tG_PlaySound(self, self->noise1);\n";
+            servertext += "\tG_FreeEntity(self);\n";
+            servertext += "}\n\n";
+
+            for (int i = 0; i < qcFiles.Count; i++)
+            {
+                foreach (QCfile.Function f in qcFiles[i].functions)
+                {
+                    servertext += "__forceinline void " + f.name + "(gentity_t *self) {";
+                    servertext += PostFixFunctionBody(qcFiles[i], f.function_body);
+                    servertext += "}\n\n";
+                }
+            }
+
+            servertext += "__forceinline void FireWeapon( gentity_t *ent ) {\n";
+            servertext += "\tAngleVectors (ent->client->ps.viewangles, forward, right, up);\n";
+            servertext += "\tCalcMuzzlePointOrigin ( ent, ent->client->oldOrigin, forward, right, up, muzzle );\n";
+            servertext += "\tswitch( ent->s.weapon ) {\n";
+
+            for (int i = 0; i < qcFiles.Count; i++)
+            {
+                servertext += string.Format("\t\tcase {0}:\n", qcFiles[i].weaponId);
+                servertext += string.Format("\t\t\t{0}_fire(ent);\n", qcFiles[i].weaponId.ToLower());
+                servertext += string.Format("\t\tbreak;\n");
+            }
+
+            servertext += "\t}\n";
+            servertext += "}\n";
+
+            string sharedtext = GetFileHeader();
+
+            sharedtext += "typedef enum {\n";
+            sharedtext += "\tWEAPON_NONE,\n";
+
+            for(int i = 0; i < qcFiles.Count; i++)
+            {
+                sharedtext += "\t" + qcFiles[i].weaponId + ",\n";
+            }
+
+            sharedtext += "\tNUM_WEAPONS,\n";
+            sharedtext += "} weapon_t;\n\n";
+
+            sharedtext += "__forceinline int BG_GetAddTimeForWeapon( int weaponNum ) {\n";
+            sharedtext += "\tswitch( weaponNum ) {\n";
+            for (int i = 0; i < qcFiles.Count; i++)
+            {
+                sharedtext += "\t\t case " + qcFiles[i].weaponId + ": return " + qcFiles[i].weaponFireTime   + ";\n";
+            }
+            sharedtext += "\t}\n";
+            sharedtext += "\treturn 0;\n";
+            sharedtext += "}\n";
+
+            string clienttext = GetFileHeader();
+
+            clienttext += "__forceinline void CG_RegisterWeapon( int weaponNum ) {\n";
+            clienttext += "\tweaponInfo_t	*weaponInfo;\n";
+            clienttext += "\tweaponInfo = &cg_weapons[weaponNum];\n";
+            clienttext += "\tif ( weaponNum == 0 ) { return; }\n";
+            clienttext += "\tif ( weaponInfo->registered ) { return; }\n";
+            clienttext += "\tmemset( weaponInfo, 0, sizeof( *weaponInfo ) );\n";
+            clienttext += "\tweaponInfo->registered = qtrue;\n";
+            clienttext += "\tweaponInfo->loopFireSound = qfalse;\n";
+            clienttext += "\tweaponInfo->animations[WEAPON_ANIMATION_NONE].startFrame = -1;\n";
+            clienttext += "\tweaponInfo->animations[WEAPON_ANIMATION_NONE].endFrame = -1;\n";
+            clienttext += "\tswitch (weaponNum) {\n";
+
+            for(int i = 0; i < qcFiles.Count; i++)
+            {
+                clienttext += string.Format("\t\tcase {0}:\n", qcFiles[i].weaponId);
+                clienttext += "\t\t\tMAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);\n";
+                clienttext += string.Format("\t\t\tweaponInfo->weaponModel = engine->renderer->RegisterModel({0});\n", qcFiles[i].modelpath);
+                clienttext += string.Format("\t\t\tweaponInfo->flashSound[0] = engine->S_RegisterSound({0});\n", qcFiles[i].firesoundpath);
+                clienttext += string.Format("\t\t\tVectorSet(weaponInfo->weapon_offset, {0}, {1}, {2});\n", qcFiles[i].offset[0], qcFiles[i].offset[1], qcFiles[i].offset[2]);
+
+                clienttext += string.Format("\t\t\tweaponInfo->animations[WEAPON_ANIMATION_IDLE].startFrame = {0};\n", qcFiles[i].WEAPON_ANIMATION_IDLE_START);
+                clienttext += string.Format("\t\t\tweaponInfo->animations[WEAPON_ANIMATION_IDLE].endFrame = {0};\n", qcFiles[i].WEAPON_ANIMATION_IDLE_END);
+                clienttext += string.Format("\t\t\tweaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = {0};\n", qcFiles[i].WEAPON_ANIMATION_FIRE_START);
+                clienttext += string.Format("\t\t\tweaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = {0};\n", qcFiles[i].WEAPON_ANIMATION_FIRE_END);
+
+
+                clienttext += "\t\tbreak;\n";
+            }
+
+            clienttext += "\t};\n";
+            clienttext += "}\n";
+
+            File.WriteAllText(clientGeneratedHeader, clienttext);
+            File.WriteAllText(sharedGeneratedHeader, sharedtext);
+            File.WriteAllText(serverGeneratedHeader, servertext);
         }
 
         static void WriteClass(QCfile qc, string filename)
@@ -266,6 +379,8 @@ namespace QuakeToC
                 return;
             }
 
+            List<QCfile> weaponList = new List<QCfile>();
+
             foreach (string f in files)
             {               
                 string name = Path.GetFileNameWithoutExtension(f);
@@ -275,13 +390,19 @@ namespace QuakeToC
 
                 Console.WriteLine("Compiling " + f);
 
-               // LookupTableTextBody += "#include \"generated_" + name + ".h\"\n";
-
-                // Write out the animation header.
-                WriteHeader(qc, "../superscript/generated/generated_" + name + ".h");
-
-                WriteClass(qc, "../superscript/generated/generated_" + name + ".cpp");
+                if (qc.IsWeapon)
+                {
+                    weaponList.Add(qc);
+                }
+                else // This is now assumed to be AI.
+                {
+                    // Write out the animation header.
+                    WriteHeader(qc, "../superscript/generated/generated_" + name + ".h");
+                    WriteClass(qc, "../superscript/generated/generated_" + name + ".cpp");
+                }
             }
+
+            WriteWeaponHeader("../superscript/generated/generated_game_global.h", "../superscript/clientgenerated/generated_cgame_global.h", "../superscript/sharedgenerated/generated_bggame_global.h", weaponList);
 
             LookupTableTextBody += LookupFuncList;
 

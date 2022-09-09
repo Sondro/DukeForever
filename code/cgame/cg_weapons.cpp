@@ -596,147 +596,6 @@ static void CG_GrenadeTrail( centity_t *ent, const weaponInfo_t *wi ) {
 	CG_RocketTrail( ent, wi );
 }
 
-
-/*
-=================
-CG_RegisterWeapon
-
-The server says this item is used on this level
-=================
-*/
-void CG_RegisterWeapon( int weaponNum ) {
-	weaponInfo_t	*weaponInfo;
-	//gitem_t			*item, *ammo;
-	char			path[MAX_QPATH];
-	vec3_t			mins, maxs;
-	int				i;
-
-	weaponInfo = &cg_weapons[weaponNum];
-
-	if ( weaponNum == 0 ) {
-		return;
-	}
-
-	if ( weaponInfo->registered ) {
-		return;
-	}
-
-	memset( weaponInfo, 0, sizeof( *weaponInfo ) );
-	weaponInfo->registered = qtrue;
-
-	//weaponInfo->weaponIcon = engine->renderer->RegisterShader( item->icon );
-	//weaponInfo->ammoIcon = engine->renderer->RegisterShader( item->icon );
-
-	//for ( ammo = bg_itemlist + 1 ; ammo->classname ; ammo++ ) {
-	//	if ( ammo->giType == IT_AMMO && ammo->giTag == weaponNum ) {
-	//		break;
-	//	}
-	//}
-	//if ( ammo->classname && ammo->world_model[0] ) {
-	//	weaponInfo->ammoModel = engine->renderer->RegisterModel( ammo->world_model[0] );
-	//}
-
-	weaponInfo->loopFireSound = qfalse;
-
-	weaponInfo->animations[WEAPON_ANIMATION_NONE].endFrame = -1;
-	weaponInfo->animations[WEAPON_ANIMATION_NONE].startFrame = -1;
-
-	switch ( weaponNum ) {
-	case WP_AXE:
-		MAKERGB( weaponInfo->flashDlightColor, 0.6f, 0.6f, 1.0f );
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_axe.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound( "sound/weapons/axe1.wav" );		
-		break;
-
-	case WP_PISTOL:
-		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/pistol/pistol.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");
-		weaponInfo->animations[WEAPON_ANIMATION_IDLE].startFrame = 113;
-		weaponInfo->animations[WEAPON_ANIMATION_IDLE].endFrame = 113;
-		weaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = 0;
-		weaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = 8;				
-		VectorSet(weaponInfo->weapon_offset, 12, 4, -13);
-		break;
-
-	case WP_SHOTGUN:
-		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/shotgun/shotgun.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");	
-		weaponInfo->animations[WEAPON_ANIMATION_IDLE].startFrame = 0;
-		weaponInfo->animations[WEAPON_ANIMATION_IDLE].endFrame = 0;
-		weaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = 122;
-		weaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = 148;		
-		VectorSet(weaponInfo->weapon_offset, -10, 4, -8);
-		break;
-
-	case WP_SUPER_SHOTGUN:
-		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_shot2.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/shotgn2.wav");
-		break;
-
-	case WP_NAILGUN:
-		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_nail.md3");
-		weaponInfo->missileModel = engine->renderer->RegisterModel("models/projectiles/s_spike.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/rocket1i.wav");
-		break;
-
-	case WP_SUPER_NAILGUN:
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_nail2.md3");
-		weaponInfo->missileModel = engine->renderer->RegisterModel("models/projectiles/s_spike.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/rocket1i.wav");
-		break;
-
-	case WP_ROCKET_LAUNCHER:
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_rock2.md3");
-		weaponInfo->missileModel = engine->renderer->RegisterModel("models/projectiles/missile.md3");
-		//weaponInfo->missileSound = engine->S_RegisterSound("sound/wweapons/sgun1.wav", qfalse);
-		weaponInfo->missileTrailFunc = CG_RocketTrail;
-		weaponInfo->missileDlight = 200;
-		weaponInfo->wiTrailTime = 2000;
-		weaponInfo->trailRadius = 64;
-
-		MAKERGB(weaponInfo->missileDlightColor, 1, 0.75f, 0);
-		MAKERGB(weaponInfo->flashDlightColor, 1, 0.75f, 0);
-
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/sgun1.wav");
-		cgs.media.rocketExplosionShader = engine->renderer->RegisterShader("rocketExplosion");
-		break;
-
-	case WP_GRENADE_LAUNCHER:
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_rock.md3");
-		weaponInfo->missileModel = engine->renderer->RegisterModel("models/projectiles/grenade.md3");
-		//weaponInfo->missileTrailFunc = CG_GrenadeTrail;
-		weaponInfo->wiTrailTime = 700;
-		weaponInfo->trailRadius = 32;
-		MAKERGB(weaponInfo->flashDlightColor, 1, 0.70f, 0);
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/grenade.wav");
-		cgs.media.grenadeExplosionShader = engine->renderer->RegisterShader("grenadeExplosion");
-		break;
-
-	case WP_LIGHTNING:
-		MAKERGB( weaponInfo->flashDlightColor, 0.6f, 0.6f, 1.0f );
-		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_light.md3");
-		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/lstart.wav");
-		weaponInfo->beamType = BEAM_LIGHTNING2;
-		weaponInfo->oneSource = qtrue;
-		break;
-
-	 default:
-		MAKERGB( weaponInfo->flashDlightColor, 1, 1, 1 );
-		weaponInfo->flashSound[0] = engine->S_RegisterSound( "sound/weapons/rocket/rocklf1a.wav" );
-		break;
-	}
-
-	// calc midpoint for rotation
-	engine->renderer->ModelBounds(weaponInfo->weaponModel, mins, maxs);
-	for (i = 0; i < 3; i++) {
-		weaponInfo->weaponMidpoint[i] = mins[i] + 0.5 * (maxs[i] - mins[i]);
-	}
-}
-
 /*
 ========================================================================================
 
@@ -1009,7 +868,7 @@ void CG_AddPlayerWeapon( refEntity_t *parent, playerState_t *ps, centity_t *cent
 	}
 
 	// add the flash
-	if ( ( weaponNum == WP_LIGHTNING || weaponNum == WP_AXE )
+	if ( (weaponNum == WEAPON_MIGHTYFOOT)
 		&& ( nonPredictedCent->currentState.eFlags & EF_FIRING ) ) 
 	{
 		// continuous flash
@@ -1282,7 +1141,7 @@ void CG_NextWeapon_f( void ) {
 		if ( cg.weaponSelect == 16 ) {
 			cg.weaponSelect = 0;
 		}
-		if ( cg.weaponSelect == WP_AXE ) {
+		if ( cg.weaponSelect == WEAPON_MIGHTYFOOT) {
 			continue;		// never cycle to gauntlet
 		}
 		if ( CG_WeaponSelectable( cg.weaponSelect ) ) {
@@ -1318,7 +1177,7 @@ void CG_PrevWeapon_f( void ) {
 		if ( cg.weaponSelect == -1 ) {
 			cg.weaponSelect = 15;
 		}
-		if ( cg.weaponSelect == WP_AXE ) {
+		if ( cg.weaponSelect == WEAPON_MIGHTYFOOT) {
 			continue;		// never cycle to gauntlet
 		}
 		if ( CG_WeaponSelectable( cg.weaponSelect ) ) {
@@ -1403,11 +1262,11 @@ void CG_FireWeapon( centity_t *cent ) {
 	weaponInfo_t	*weap;
 
 	ent = &cent->currentState;
-	if ( ent->weapon == WP_NONE ) {
+	if ( ent->weapon == WEAPON_NONE ) {
 		return;
 	}
-	if ( ent->weapon >= WP_NUM_WEAPONS ) {
-		CG_Error( "CG_FireWeapon: ent->weapon >= WP_NUM_WEAPONS" );
+	if ( ent->weapon >= NUM_WEAPONS ) {
+		CG_Error( "CG_FireWeapon: ent->weapon >= NUM_WEAPONS" );
 		return;
 	}
 	weap = &cg_weapons[ ent->weapon ];
@@ -1420,11 +1279,11 @@ void CG_FireWeapon( centity_t *cent ) {
 	cent->weaponFrame = weap->animations[WEAPON_ANIMATION_FIRE].startFrame;
 
 	// lightning gun only does this this on initial press
-	if ( ent->weapon == WP_LIGHTNING ) {
-		if ( cent->pe.lightningFiring ) {
-			return;
-		}
-	}
+	//if ( ent->weapon == WP_LIGHTNING ) {
+	//	if ( cent->pe.lightningFiring ) {
+	//		return;
+	//	}
+	//}
 
 	// play quad sound if needed
 	if ( cent->currentState.powerups & ( 1 << PW_QUAD ) ) {
@@ -1486,6 +1345,7 @@ Caused by an EV_MISSILE_MISS event, or directly by local bullet tracing
 =================
 */
 void CG_MissileHitWall( int weapon, int clientNum, vec3_t origin, vec3_t dir, impactSound_t soundType ) {
+#if 0
 	qhandle_t		mod;
 	qhandle_t		mark;
 	qhandle_t		shader;
@@ -1690,6 +1550,7 @@ void CG_MissileHitWall( int weapon, int clientNum, vec3_t origin, vec3_t dir, im
 	//} else {
 		CG_ImpactMark( mark, origin, dir, random()*360, 1,1,1,1, alphaFade, radius, qfalse, 0);
 	//}
+#endif
 }
 
 

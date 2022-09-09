@@ -9,6 +9,12 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="ClientGenerated">
+      <UniqueIdentifier>{4decff6e-d9e9-4270-a455-e3d791dd4e3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SharedGenerated">
+      <UniqueIdentifier>{7406d5f3-42c3-4738-8324-622591d10253}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="dog.qc">
@@ -20,9 +26,6 @@
     <None Include="soldier.qc">
       <Filter>Scripts</Filter>
     </None>
-    <None Include="zombie.qc">
-      <Filter>Scripts</Filter>
-    </None>
     <None Include="knight.qc">
       <Filter>Scripts</Filter>
     </None>
@@ -30,6 +33,18 @@
       <Filter>Scripts</Filter>
     </None>
     <None Include="map_zoo.qc">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="weapon_pistol.qc">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="weapon_shotgun.qc">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="weapon_mightyfoot.qc">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="weapon_rpg.qc">
       <Filter>Scripts</Filter>
     </None>
   </ItemGroup>
@@ -41,9 +56,6 @@
       <Filter>Generated</Filter>
     </ClCompile>
     <ClCompile Include="generated\generated_soldier.cpp">
-      <Filter>Generated</Filter>
-    </ClCompile>
-    <ClCompile Include="generated\generated_zombie.cpp">
       <Filter>Generated</Filter>
     </ClCompile>
     <ClCompile Include="generated\generated_knight.cpp">
@@ -66,9 +78,6 @@
     <ClInclude Include="generated\generated_soldier.h">
       <Filter>Generated</Filter>
     </ClInclude>
-    <ClInclude Include="generated\generated_zombie.h">
-      <Filter>Generated</Filter>
-    </ClInclude>
     <ClInclude Include="superscript.h">
       <Filter>Generated</Filter>
     </ClInclude>
@@ -85,6 +94,15 @@
       <Filter>Generated</Filter>
     </ClInclude>
     <ClInclude Include="generated\generated_map_zoo.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedgenerated\generated_bggame_global.h">
+      <Filter>SharedGenerated</Filter>
+    </ClInclude>
+    <ClInclude Include="clientgenerated\generated_cgame_global.h">
+      <Filter>ClientGenerated</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\generated_game_global.h">
       <Filter>Generated</Filter>
     </ClInclude>
   </ItemGroup>

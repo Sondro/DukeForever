@@ -220,67 +220,6 @@ void SP_item_armorinv(gentity_t* self) {
 
 /*
 =============
-SP_ammo_touch
-=============
-*/
-void SP_ammo_touch(gentity_t* self, gentity_t* other, trace_t* trace) {
-	playerState_t* ps;
-
-	if (other->client == NULL) {
-		return;
-	}
-
-	if (other->health <= 0) {
-		return;
-	}
-
-	ps = &other->client->ps;
-
-	switch (self->itemWeapon) {
-		case WP_PISTOL:
-			if (ps->ammo[WP_PISTOL] >= 50) {
-				return;
-			}
-			ps->ammo[WP_PISTOL] = min(ps->ammo[WP_PISTOL] + self->itemAmmoWeaponFlag, 100);
-			break;
-
-		case WP_SHOTGUN:
-			if (ps->ammo[WP_SHOTGUN] >= 100) {
-				return;
-			}
-			ps->ammo[WP_SHOTGUN] = min(ps->ammo[WP_SHOTGUN] + self->itemAmmoWeaponFlag, 100);
-			break;
-		case WP_NAILGUN:
-			if (ps->ammo[WP_NAILGUN] >= 200) {
-				return;
-			}
-			ps->ammo[WP_NAILGUN] = min(ps->ammo[WP_NAILGUN] + self->itemAmmoWeaponFlag, 200);
-			break;
-		case WP_ROCKET_LAUNCHER:
-			if (ps->ammo[WP_ROCKET_LAUNCHER] >= 100) {
-				return;
-			}
-			ps->ammo[WP_ROCKET_LAUNCHER] = min(ps->ammo[WP_ROCKET_LAUNCHER] + self->itemAmmoWeaponFlag, 100);
-			break;
-		case WP_LIGHTNING:
-			if (ps->ammo[WP_LIGHTNING] >= 200) {
-				return;
-			}
-			ps->ammo[WP_LIGHTNING] = min(ps->ammo[WP_LIGHTNING] + self->itemAmmoWeaponFlag, 100);
-			break;
-
-		default:
-			G_Error("SP_ammo_touch: Unknown item type!\n");
-			break;
-	}
-
-	G_Printf("You got the %s\n", self->netname);
-	G_PlaySound(self, self->noise1);
-	G_FreeEntity(self);
-}
-
-/*
-=============
 SP_item_shells
 =============
 */
@@ -306,7 +245,7 @@ void SP_item_shells(gentity_t* self) {
 	VectorSet(self->r.mins, 0, 0, 0);
 	VectorSet(self->r.maxs, 32, 32, 56);
 
-	self->itemWeapon = WP_SHOTGUN;
+	//self->itemWeapon = WP_SHOTGUN;
 	
 	engine->SV_LinkEntity(self);
 
@@ -343,7 +282,7 @@ void SP_item_nails(gentity_t* self) {
 	VectorSet(self->r.mins, 0, 0, 0);
 	VectorSet(self->r.maxs, 32, 32, 56);
 
-	self->itemWeapon = WP_NAILGUN;
+	//self->itemWeapon = WP_NAILGUN;
 
 	engine->SV_LinkEntity(self);
 
@@ -384,7 +323,7 @@ void SP_weapon_supershotgun(gentity_t* self) {
 	self->touch = weapon_touch;
 	self->itemAmmoWeaponFlag = 5;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_shot.md3");
-	self->itemWeapon = WP_SUPER_SHOTGUN;
+	//self->itemWeapon = WP_SUPER_SHOTGUN;
 	self->netname = "Double-barrelled Shotgun";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
@@ -406,7 +345,7 @@ void SP_weapon_nailgun(gentity_t* self) {
 	self->touch = weapon_touch;
 	self->itemAmmoWeaponFlag = 30;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_nail.md3");
-	self->itemWeapon = WP_NAILGUN;
+	//self->itemWeapon = WP_NAILGUN;
 	self->netname = "nailgun";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
@@ -428,7 +367,7 @@ void SP_weapon_supernailgun(gentity_t* self) {
 	self->touch = weapon_touch;
 	self->itemAmmoWeaponFlag = 30;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_nail2.md3");
-	self->itemWeapon = WP_SUPER_NAILGUN;
+//	self->itemWeapon = WP_SUPER_NAILGUN;
 	self->netname = "Super Nailgun";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
@@ -450,7 +389,7 @@ void SP_weapon_grenadelauncher(gentity_t* self) {
 	self->itemAmmoWeaponFlag = 5;
 	self->touch = weapon_touch;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_rock.md3");
-	self->itemWeapon = WP_GRENADE_LAUNCHER;
+	//self->itemWeapon = WP_GRENADE_LAUNCHER;
 	self->netname = "Grenade Launcher";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
@@ -472,7 +411,7 @@ void SP_weapon_rocketlauncher(gentity_t* self) {
 	self->itemAmmoWeaponFlag = 5;
 	self->touch = weapon_touch;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_rock2.md3");
-	self->itemWeapon = WP_ROCKET_LAUNCHER;
+//	self->itemWeapon = WP_ROCKET_LAUNCHER;
 	self->netname = "Rocket Launcher";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
@@ -494,7 +433,7 @@ void SP_weapon_lightning(gentity_t* self) {
 	self->itemAmmoWeaponFlag = 15;
 	self->touch = weapon_touch;
 	self->s.modelindex = G_ModelIndex("models/weapons2/g_light.md3");
-	self->itemWeapon = WP_LIGHTNING;
+	//self->itemWeapon = WP_LIGHTNING;
 	self->netname = "Thunderbolt";
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);

@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 void map_zoo_initial_spawn(gentity_t *self);
 void map_zoo_worldspawn(gentity_t *self);
 void map_zoo_text_example(gentity_t *self);

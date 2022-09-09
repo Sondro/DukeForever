@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 #define attack1 0
 #define attack2 1
 #define attack3 2

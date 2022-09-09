@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 #define stand1 0
 #define stand2 1
 #define stand3 2

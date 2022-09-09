@@ -13,6 +13,39 @@ namespace QuakeToC
         public float[] origin = new float[3];
         public string _base;
         public string _skin;
+        public string modelpath;
+        public string filename;
+
+        // Weapon Info
+        public float[] offset = new float[3];
+        public int weaponFireTime;
+        public string firesoundpath;
+
+        public int WEAPON_ANIMATION_IDLE_START;
+        public int WEAPON_ANIMATION_IDLE_END;
+        public int WEAPON_ANIMATION_FIRE_START;
+        public int WEAPON_ANIMATION_FIRE_END;
+        public int WEAPON_AMMO_TOUCH;
+        public int WEAPON_MAX_AMMO;
+
+        public string weaponId
+        {
+            get
+            {
+                if (!IsWeapon)
+                    return null;
+
+                return Path.GetFileNameWithoutExtension(filename.ToUpper());
+            }
+        }
+
+        public bool IsWeapon
+        {
+            get
+            {
+                return filename.Contains("weapon_");
+            }
+        }
 
         public class Variable
         {
@@ -89,6 +122,8 @@ namespace QuakeToC
 
         public QCfile(string filename)
         {
+            this.filename = filename;
+
             Console.WriteLine("Parsing " + filename);
             Compile(File.ReadAllText(filename));
         }
@@ -314,6 +349,49 @@ namespace QuakeToC
                     origin[0] = float.Parse(GetNextToken(tokens, ref i));
                     origin[1] = float.Parse(GetNextToken(tokens, ref i));
                     origin[2] = float.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$model")
+                {
+                    modelpath = GetNextToken(tokens, ref i);
+                }
+                else if (t == "$firesound")
+                {
+                    firesoundpath = GetNextToken(tokens, ref i);
+                }
+                
+                else if (t == "$WEAPON_ANIMATION_IDLE_START")
+                {
+                    WEAPON_ANIMATION_IDLE_START = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$WEAPON_ANIMATION_IDLE_END")
+                {
+                    WEAPON_ANIMATION_IDLE_END = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$WEAPON_ANIMATION_FIRE_START")
+                {
+                    WEAPON_ANIMATION_FIRE_START = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$WEAPON_ANIMATION_FIRE_END")
+                {
+                    WEAPON_ANIMATION_FIRE_END = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if(t == "$WEAPON_AMMO_TOUCH")
+                {
+                    WEAPON_AMMO_TOUCH = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$WEAPON_MAX_AMMO")
+                {
+                    WEAPON_MAX_AMMO = int.Parse(GetNextToken(tokens, ref i));
+                }
+                else if (t == "$firetime")
+                {
+                    weaponFireTime = int.Parse(GetNextToken(tokens, ref i));
+                }                    
+                else if (t == "$offset")
+                {
+                    offset[0] = float.Parse(GetNextToken(tokens, ref i));
+                    offset[1] = float.Parse(GetNextToken(tokens, ref i));
+                    offset[2] = float.Parse(GetNextToken(tokens, ref i));
                 }
                 else if (t == "$base")
                 {

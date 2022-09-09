@@ -547,6 +547,7 @@ gentity_t *fire_plasma (gentity_t *self, vec3_t start, vec3_t dir) {
 fire_grenade
 =================
 */
+
 gentity_t *fire_grenade (gentity_t *self, vec3_t start, vec3_t dir) {
 	gentity_t	*bolt;
 
@@ -558,7 +559,7 @@ gentity_t *fire_grenade (gentity_t *self, vec3_t start, vec3_t dir) {
 	bolt->think = G_ExplodeGrenade;
 	bolt->s.eType = ET_MISSILE;
 	bolt->r.svFlags = SVF_USE_CURRENT_ORIGIN;
-	bolt->s.weapon = WP_GRENADE_LAUNCHER;
+	bolt->s.weapon = WEAPON_RPG;
 	bolt->s.eFlags = EF_BOUNCE_HALF;
 	bolt->r.ownerNum = self->s.number;
 	bolt->parent = self;
@@ -641,7 +642,7 @@ gentity_t *fire_rocket (gentity_t *self, vec3_t start, vec3_t dir) {
 	bolt->think = G_ExplodeMissile;
 	bolt->s.eType = ET_MISSILE;
 	bolt->r.svFlags = SVF_USE_CURRENT_ORIGIN;
-	bolt->s.weapon = WP_ROCKET_LAUNCHER;
+	bolt->s.weapon = WEAPON_RPG;
 	bolt->r.ownerNum = self->s.number;
 	bolt->parent = self;
 	bolt->damage = 100;
@@ -705,7 +706,7 @@ fire_nail
 =================
 */
 #define NAILGUN_SPREAD	0
-
+#if 0
 gentity_t *fire_nail( gentity_t *self, vec3_t start, vec3_t forward, vec3_t right, vec3_t up ) {
 	gentity_t	*bolt;
 	vec3_t		dir;
@@ -747,4 +748,4 @@ gentity_t *fire_nail( gentity_t *self, vec3_t start, vec3_t forward, vec3_t righ
 
 	return bolt;
 }	
-
+#endif

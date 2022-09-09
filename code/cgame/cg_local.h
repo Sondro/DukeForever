@@ -1565,3 +1565,7 @@ extern "C" {
 
 extern cgameImport_t* engine;
 extern pmove_t		cg_pmove;
+
+#include "../superscript/sharedgenerated/generated_bggame_global.h"
+#include "../superscript/clientgenerated/generated_cgame_global.h"
+

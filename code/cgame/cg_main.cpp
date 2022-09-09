@@ -802,7 +802,7 @@ static void CG_RegisterGraphics( void ) {
 	
 
 	memset(cg_weapons, 0, sizeof(cg_weapons));
-	for (int i = WP_AXE; i < WP_NUM_WEAPONS; i++) {
+	for (int i = WEAPON_MIGHTYFOOT; i < NUM_WEAPONS; i++) {
 		CG_RegisterWeapon(i);
 	}
 
@@ -1869,7 +1869,7 @@ void CG_Init( int serverMessageNum, int serverCommandSequence, int clientNum ) {
 
 	CG_InitConsoleCommands();
 
-	cg.weaponSelect = WP_PISTOL;
+	cg.weaponSelect = WEAPON_PISTOL;
 
 	cgs.redflag = cgs.blueflag = -1; // For compatibily, default to unset for
 	cgs.flagStatus = -1;

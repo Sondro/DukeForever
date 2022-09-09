@@ -20,7 +20,6 @@ void() map_zoo_initial_spawn
 void() map_zoo_worldspawn
 {
 	// Since we are spawning in monsters that aren't placed in the level, we need to preache the data.
-	monster_zombie_precache(null);
 	monster_army_precache(null);
 };
 

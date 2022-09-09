@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 #define GENERATED_SUPERSCRIPT 1
 #include "../../splines/math_vector.h"
 #include "../../game/g_local.h "
@@ -21,7 +23,6 @@ void map_zoo_initial_spawn(gentity_t *self) {
 void map_zoo_worldspawn(gentity_t *self) {
 
 	
-	monster_zombie_precache(null);
 	monster_army_precache(null);
 }
 void map_zoo_text_example(gentity_t *self) {

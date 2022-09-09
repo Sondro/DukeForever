@@ -1467,7 +1467,7 @@ PM_BeginWeaponChange
 ===============
 */
 static void PM_BeginWeaponChange( int weapon ) {
-	if ( weapon <= WP_NONE || weapon >= WP_NUM_WEAPONS ) {
+	if ( weapon <= WEAPON_NONE || weapon >= NUM_WEAPONS ) {
 		return;
 	}
 
@@ -1495,12 +1495,12 @@ static void PM_FinishWeaponChange( void ) {
 	int		weapon;
 
 	weapon = pm->cmd.weapon;
-	if ( weapon < WP_NONE || weapon >= WP_NUM_WEAPONS ) {
-		weapon = WP_NONE;
+	if ( weapon < WEAPON_NONE || weapon >= NUM_WEAPONS ) {
+		weapon = WEAPON_NONE;
 	}
 
 	if ( !( pm->ps->stats[STAT_WEAPONS] & ( 1 << weapon ) ) ) {
-		weapon = WP_NONE;
+		weapon = WEAPON_NONE;
 	}
 
 	pm->ps->weapon = weapon;
@@ -1518,7 +1518,7 @@ PM_TorsoAnimation
 */
 static void PM_TorsoAnimation( void ) {
 	if ( pm->ps->weaponstate == WEAPON_READY ) {
-		if ( pm->ps->weapon == WP_AXE ) {
+		if ( pm->ps->weapon == WEAPON_MIGHTYFOOT) {
 			PM_ContinueTorsoAnim( TORSO_STAND2 );
 		} else {
 			PM_ContinueTorsoAnim( TORSO_STAND );
@@ -1550,7 +1550,7 @@ static void PM_Weapon( void ) {
 
 	// check for dead player
 	if ( pm->ps->stats[STAT_HEALTH] <= 0 ) {
-		pm->ps->weapon = WP_NONE;
+		pm->ps->weapon = WEAPON_NONE;
 		return;
 	}
 
@@ -1598,7 +1598,7 @@ static void PM_Weapon( void ) {
 
 	if ( pm->ps->weaponstate == WEAPON_RAISING ) {
 		pm->ps->weaponstate = WEAPON_READY;
-		if ( pm->ps->weapon == WP_AXE ) {
+		if ( pm->ps->weapon == WEAPON_MIGHTYFOOT) {
 			PM_StartTorsoAnim( TORSO_STAND2 );
 		} else {
 			PM_StartTorsoAnim( TORSO_STAND );
@@ -1614,7 +1614,7 @@ static void PM_Weapon( void ) {
 	}
 
 	// start the animation even if out of ammo
-	if ( pm->ps->weapon == WP_AXE ) {
+	if ( pm->ps->weapon == WEAPON_MIGHTYFOOT) {
 		// the guantlet only "fires" when it actually hits something
 		if ( !pm->gauntletHit ) {
 // jmarshall - tell the animation system we fired
@@ -1646,37 +1646,7 @@ static void PM_Weapon( void ) {
 	// fire weapon
 	PM_AddEvent( EV_FIRE_WEAPON );
 
-	switch( pm->ps->weapon ) {
-	default:
-	case WP_AXE:
-		addTime = 400;
-		break;
-	case WP_LIGHTNING:
-		addTime = 50;
-		break;
-	case WP_PISTOL:
-		addTime = 300;
-		break;
-	case WP_SHOTGUN:
-		addTime = 700;
-		break;
-	case WP_SUPER_SHOTGUN:
-		addTime = 1000;
-		break;
-	case WP_NAILGUN:
-		addTime = 150;
-		break;
-	case WP_SUPER_NAILGUN:
-		addTime = 100;
-		break;
-
-	case WP_GRENADE_LAUNCHER:
-		addTime = 800;
-		break;
-	case WP_ROCKET_LAUNCHER:
-		addTime = 800;
-		break;
-	}
+	addTime = BG_GetAddTimeForWeapon(pm->ps->weapon);
 
 	if ( pm->ps->powerups[PW_HASTE] ) {
 		addTime /= 1.3;

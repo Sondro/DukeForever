@@ -3,6 +3,8 @@
 // This auto generated file is released under the GPL license, please see code_license.txt
 // 
 
+#pragma once
+
 typedef enum {
 	anim_event_none = 0,
 	anim_event_stand,
@@ -28,9 +30,4 @@ typedef enum {
 	anim_event_bdeath,
 	anim_event_prowl_,
 	anim_event_deathc,
-	anim_event_cruc_,
-	anim_event_atta,
-	anim_event_attb,
-	anim_event_attc,
-	anim_event_paina,
 } animEventType_t;

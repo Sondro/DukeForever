@@ -1236,3 +1236,11 @@ gameModelCacheEntry_t* G_LoadModel(char* fileName);
 #endif
 
 void RotateBounds(float* mins, float* maxs, float* angle);
+
+void G_SpawnShotgunFire(gentity_t* self);
+extern vec3_t	forward, right, up;
+extern vec3_t	muzzle;
+
+void CalcMuzzlePointOrigin(gentity_t* ent, vec3_t origin, vec3_t forward, vec3_t right, vec3_t up, vec3_t muzzlePoint);
+
+#include "../superscript/generated/generated_game_global.h"
