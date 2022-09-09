@@ -409,6 +409,8 @@ typedef struct weaponInfo_s {
 
 	beamType_t		beamType;
 
+	vec3_t			weapon_offset;
+
 	vec3_t			weaponMidpoint;		// so it will rotate centered instead of by tag
 
 	float			flashDlight;

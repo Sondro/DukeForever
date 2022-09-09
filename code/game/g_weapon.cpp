@@ -362,6 +362,9 @@ void weapon_shotgun_fire(gentity_t* ent) {
 	ShotgunPattern(6, 0.04, 0.04, tent->s.pos.trBase, tent->s.origin2, tent->s.eventParm, ent);
 }
 
+void weapon_pistol_fire(gentity_t* ent) {
+	Bullet_Fire(ent, 0, 10);
+}
 
 /*
 ======================================================================
@@ -845,6 +848,9 @@ void FireWeapon( gentity_t *ent ) {
 	switch( ent->s.weapon ) {
 	case WP_AXE:
 		Weapon_Gauntlet( ent );
+		break;
+	case WP_PISTOL:
+		weapon_pistol_fire(ent);
 		break;
 	case WP_SHOTGUN:
 		weapon_shotgun_fire(ent);

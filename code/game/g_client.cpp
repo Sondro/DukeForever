@@ -1181,8 +1181,8 @@ void ClientSpawn(gentity_t *ent) {
 	}
 	else
 	{
-		client->ps.stats[STAT_WEAPONS] = (1 << WP_SHOTGUN);
-		client->ps.ammo[WP_SHOTGUN] = 50;
+		client->ps.stats[STAT_WEAPONS] = (1 << WP_PISTOL);
+		client->ps.ammo[WP_PISTOL] = 50;
 
 		client->ps.stats[STAT_WEAPONS] |= (1 << WP_AXE);
 		client->ps.ammo[WP_AXE] = -1;
@@ -1211,7 +1211,7 @@ void ClientSpawn(gentity_t *ent) {
 		}
 		else
 		{
-			client->ps.weapon = WP_SHOTGUN;
+			client->ps.weapon = WP_PISTOL;
 		}		
 
 		client->ps.weaponstate = WEAPON_READY;

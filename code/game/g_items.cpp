@@ -237,6 +237,13 @@ void SP_ammo_touch(gentity_t* self, gentity_t* other, trace_t* trace) {
 	ps = &other->client->ps;
 
 	switch (self->itemWeapon) {
+		case WP_PISTOL:
+			if (ps->ammo[WP_PISTOL] >= 50) {
+				return;
+			}
+			ps->ammo[WP_PISTOL] = min(ps->ammo[WP_PISTOL] + self->itemAmmoWeaponFlag, 100);
+			break;
+
 		case WP_SHOTGUN:
 			if (ps->ammo[WP_SHOTGUN] >= 100) {
 				return;

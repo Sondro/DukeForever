@@ -647,12 +647,27 @@ void CG_RegisterWeapon( int weaponNum ) {
 		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons2/v_axe.md3");
 		weaponInfo->flashSound[0] = engine->S_RegisterSound( "sound/weapons/axe1.wav" );		
 		break;
+
+	case WP_PISTOL:
+		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
+		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/pistol/pistol.md3");
+		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");
+		weaponInfo->animations[WEAPON_ANIMATION_IDLE].startFrame = 113;
+		weaponInfo->animations[WEAPON_ANIMATION_IDLE].endFrame = 113;
+		weaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = 0;
+		weaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = 8;				
+		VectorSet(weaponInfo->weapon_offset, 12, 4, -13);
+		break;
+
 	case WP_SHOTGUN:
 		MAKERGB(weaponInfo->flashDlightColor, 1, 1, 0);
 		weaponInfo->weaponModel = engine->renderer->RegisterModel("models/weapons/shotgun/shotgun.md3");
 		weaponInfo->flashSound[0] = engine->S_RegisterSound("sound/weapons/guncock.wav");	
+		weaponInfo->animations[WEAPON_ANIMATION_IDLE].startFrame = 0;
+		weaponInfo->animations[WEAPON_ANIMATION_IDLE].endFrame = 0;
 		weaponInfo->animations[WEAPON_ANIMATION_FIRE].startFrame = 122;
 		weaponInfo->animations[WEAPON_ANIMATION_FIRE].endFrame = 148;		
+		VectorSet(weaponInfo->weapon_offset, -10, 4, -8);
 		break;
 
 	case WP_SUPER_SHOTGUN:
@@ -955,9 +970,12 @@ void CG_AddPlayerWeapon( refEntity_t *parent, playerState_t *ps, centity_t *cent
 		cent->weaponFrame += cg.deltaTime;
 
 		if (cent->weaponFrame >= weapon->animations[WEAPON_ANIMATION_FIRE].endFrame) {
-			cent->weaponFrame = 0;
+			gun.oldframe = gun.frame = cent->weaponFrame = weapon->animations[WEAPON_ANIMATION_IDLE].startFrame;
 			cent->fireWeaponAnim = qfalse;
 		}
+	}
+	else {
+		gun.oldframe = gun.frame = cent->weaponFrame = cent->weaponFrame = weapon->animations[WEAPON_ANIMATION_IDLE].startFrame;
 	}
 
 	CG_AddWeaponWithPowerups( &gun, cent->currentState.powerups );
@@ -1107,9 +1125,18 @@ void CG_AddViewWeapon( playerState_t *ps ) {
 	// set up gun position
 	CG_CalculateWeaponPosition( hand.origin, angles );
 
-	VectorMA( hand.origin, cg_gun_x.value, cg.refdef.viewaxis[0], hand.origin );
-	VectorMA( hand.origin, cg_gun_y.value, cg.refdef.viewaxis[1], hand.origin );
-	VectorMA( hand.origin, (cg_gun_z.value+fovOffset), cg.refdef.viewaxis[2], hand.origin );
+	if (cg_gun_x.value != 0 || cg_gun_y.value != 0 || cg_gun_z.value != 0)
+	{
+		VectorMA(hand.origin, cg_gun_x.value, cg.refdef.viewaxis[0], hand.origin);
+		VectorMA(hand.origin, cg_gun_y.value, cg.refdef.viewaxis[1], hand.origin);
+		VectorMA(hand.origin, (cg_gun_z.value + fovOffset), cg.refdef.viewaxis[2], hand.origin);
+	}
+	else
+	{
+		VectorMA(hand.origin, weapon->weapon_offset[0], cg.refdef.viewaxis[0], hand.origin);
+		VectorMA(hand.origin, weapon->weapon_offset[1], cg.refdef.viewaxis[1], hand.origin);
+		VectorMA(hand.origin, (weapon->weapon_offset[2] + fovOffset), cg.refdef.viewaxis[2], hand.origin);
+	}
 
 	AnglesToAxis( angles, hand.axis );
 
@@ -1579,7 +1606,7 @@ void CG_MissileHitWall( int weapon, int clientNum, vec3_t origin, vec3_t dir, im
 	//	isSprite = qtrue;
 	//	break;
 
-	case WP_SUPER_SHOTGUN:
+	case WP_PISTOL:
 	case WP_SHOTGUN:
 		mod = cgs.media.bulletFlashModel;
 		shader = cgs.media.bulletExplosionShader;
