@@ -319,6 +319,10 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
 	shader_t*			defaultShader;
 	char				shaderName[512];
 
+	qboolean			isNewModel = qfalse;
+
+	isNewModel = strstr(mod_name, "_new_") != NULL;
+
 	pinmodel = (md3Header_t *)buffer;
 
 	version = LittleLong (pinmodel->version);
@@ -453,8 +457,11 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
 		for ( j = 0 ; j < surf->numTriangles ; j++, tri++ ) {
 			md3Triangle_t newTri = *tri;
 
-			tri->indexes[2] = newTri.indexes[0];
-			tri->indexes[0] = newTri.indexes[2];
+			if (!isNewModel)
+			{
+				tri->indexes[2] = newTri.indexes[0];
+				tri->indexes[0] = newTri.indexes[2];
+			}
 
 			LL(tri->indexes[0]);
 			LL(tri->indexes[1]);
@@ -467,8 +474,12 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
             st->st[0] = LittleFloat( st->st[0] );
             st->st[1] = LittleFloat( st->st[1] );
 
-			//st->st[0] = 1.0 - st->st[0];
-			st->st[1] = 1.0 - st->st[1];
+
+			if (!isNewModel)
+			{
+				//st->st[0] = 1.0 - st->st[0];
+				st->st[1] = 1.0 - st->st[1];
+			}
         }
 
 		// swap all the XyzNormals

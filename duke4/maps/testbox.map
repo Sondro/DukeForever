@@ -8,49 +8,31 @@
 // brush 0
 {
 ( -256 -48 -16 ) ( -256 -47 -16 ) ( -256 -48 -15 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
-( 0 -192 -16 ) ( 0 -192 -15 ) ( 1 -192 -16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
+( 0 -592 -16 ) ( 0 -592 -15 ) ( 1 -592 -16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
 ( 0 -48 -16 ) ( 1 -48 -16 ) ( 0 -47 -16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
 ( 128 80 16 ) ( 128 81 16 ) ( 129 80 16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
 ( 128 240 16 ) ( 129 240 16 ) ( 128 240 17 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
-( 128 80 16 ) ( 128 80 17 ) ( 128 81 16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
+( 528 80 16 ) ( 528 80 17 ) ( 528 81 16 ) vegas/cesfloor1RC 0 0 0 0.5 0.5
 }
 // brush 1
 {
-( 128 80 16 ) ( 128 81 16 ) ( 128 80 17 ) __TB_empty 0 0 0 0.5 0.5
-( 0 -192 -16 ) ( 0 -192 -15 ) ( 1 -192 -16 ) __TB_empty 0 0 0 0.5 0.5
-( 0 -48 -16 ) ( 1 -48 -16 ) ( 0 -47 -16 ) __TB_empty 0 0 0 0.5 0.5
-( 128 80 16 ) ( 128 81 16 ) ( 129 80 16 ) __TB_empty 0 0 0 0.5 0.5
-( 128 240 16 ) ( 129 240 16 ) ( 128 240 17 ) __TB_empty 0 0 0 0.5 0.5
-( 144 80 16 ) ( 144 80 17 ) ( 144 81 16 ) __TB_empty 0 0 0 0.5 0.5
+( 496 64 16 ) ( 496 65 16 ) ( 496 64 17 ) vegas/fancybrick_1 0 15 0 1 1
+( 368 -560 -16 ) ( 368 -560 -15 ) ( 369 -560 -16 ) vegas/fancybrick_1 0 15 0 1 1
+( 496 64 16 ) ( 497 64 16 ) ( 496 65 16 ) vegas/fancybrick_1 0 15 0 1 1
+( 496 64 272 ) ( 496 65 272 ) ( 497 64 272 ) vegas/fancybrick_1 0 15 0 1 1
+( 496 256 16 ) ( 497 256 16 ) ( 496 256 17 ) vegas/fancybrick_1 0 15 0 1 1
+( 512 64 16 ) ( 512 64 17 ) ( 512 65 16 ) vegas/fancybrick_1 0 15 0 1 1
 }
 // brush 2
 {
-( 128 80 16 ) ( 128 81 16 ) ( 128 80 17 ) vegas/fancybrick_1 0 15 0 1 1
-( 0 -192 -16 ) ( 0 -192 -15 ) ( 1 -192 -16 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 80 16 ) ( 129 80 16 ) ( 128 81 16 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 80 176 ) ( 128 81 176 ) ( 129 80 176 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 240 16 ) ( 129 240 16 ) ( 128 240 17 ) vegas/fancybrick_1 0 15 0 1 1
-( 144 80 16 ) ( 144 80 17 ) ( 144 81 16 ) vegas/fancybrick_1 0 15 0 1 1
+( -256 -416 -16 ) ( -256 -415 -16 ) ( -256 -416 -15 ) vegas/fancybrick_1 0 13 0 1 1
+( 0 -576 -16 ) ( 0 -576 -15 ) ( 1 -576 -16 ) vegas/fancybrick_1 0 13 0 1 1
+( 128 -288 16 ) ( 129 -288 16 ) ( 128 -287 16 ) vegas/fancybrick_1 0 13 0 1 1
+( 128 -288 272 ) ( 128 -287 272 ) ( 129 -288 272 ) vegas/fancybrick_1 0 13 0 1 1
+( 0 -560 -16 ) ( 1 -560 -16 ) ( 0 -560 -15 ) vegas/fancybrick_1 0 13 0 1 1
+( 528 -288 16 ) ( 528 -288 17 ) ( 528 -287 16 ) vegas/fancybrick_1 0 13 0 1 1
 }
 // brush 3
-{
-( -256 -48 -16 ) ( -256 -47 -16 ) ( -256 -48 -15 ) __TB_empty 0 0 0 0.5 0.5
-( 0 -208 -16 ) ( 0 -208 -15 ) ( 1 -208 -16 ) __TB_empty 0 0 0 0.5 0.5
-( 0 -48 -16 ) ( 1 -48 -16 ) ( 0 -47 -16 ) __TB_empty 0 0 0 0.5 0.5
-( 128 80 16 ) ( 128 81 16 ) ( 129 80 16 ) __TB_empty 0 0 0 0.5 0.5
-( 0 -192 -16 ) ( 1 -192 -16 ) ( 0 -192 -15 ) __TB_empty 0 0 0 0.5 0.5
-( 128 80 16 ) ( 128 80 17 ) ( 128 81 16 ) __TB_empty 0 0 0 0.5 0.5
-}
-// brush 4
-{
-( -256 -48 -16 ) ( -256 -47 -16 ) ( -256 -48 -15 ) vegas/fancybrick_1 0 13 0 1 1
-( 0 -208 -16 ) ( 0 -208 -15 ) ( 1 -208 -16 ) vegas/fancybrick_1 0 13 0 1 1
-( 128 80 16 ) ( 129 80 16 ) ( 128 81 16 ) vegas/fancybrick_1 0 13 0 1 1
-( 128 80 176 ) ( 128 81 176 ) ( 129 80 176 ) vegas/fancybrick_1 0 13 0 1 1
-( 0 -192 -16 ) ( 1 -192 -16 ) ( 0 -192 -15 ) vegas/fancybrick_1 0 13 0 1 1
-( 128 80 16 ) ( 128 80 17 ) ( 128 81 16 ) vegas/fancybrick_1 0 13 0 1 1
-}
-// brush 5
 {
 ( -256 -48 -16 ) ( -256 -47 -16 ) ( -256 -48 -15 ) __TB_empty 0 0 0 0.5 0.5
 ( 128 240 16 ) ( 128 240 17 ) ( 129 240 16 ) __TB_empty 0 0 0 0.5 0.5
@@ -59,16 +41,16 @@
 ( 128 256 16 ) ( 129 256 16 ) ( 128 256 17 ) __TB_empty 0 0 0 0.5 0.5
 ( 128 80 16 ) ( 128 80 17 ) ( 128 81 16 ) __TB_empty 0 0 0 0.5 0.5
 }
-// brush 6
+// brush 4
 {
 ( -256 -48 -16 ) ( -256 -47 -16 ) ( -256 -48 -15 ) vegas/fancybrick_1 0 15 0 1 1
 ( 128 240 16 ) ( 128 240 17 ) ( 129 240 16 ) vegas/fancybrick_1 0 15 0 1 1
 ( 128 80 16 ) ( 129 80 16 ) ( 128 81 16 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 80 176 ) ( 128 81 176 ) ( 129 80 176 ) vegas/fancybrick_1 0 15 0 1 1
+( 128 80 272 ) ( 128 81 272 ) ( 129 80 272 ) vegas/fancybrick_1 0 15 0 1 1
 ( 128 256 16 ) ( 129 256 16 ) ( 128 256 17 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 80 16 ) ( 128 80 17 ) ( 128 81 16 ) vegas/fancybrick_1 0 15 0 1 1
+( 528 80 16 ) ( 528 80 17 ) ( 528 81 16 ) vegas/fancybrick_1 0 15 0 1 1
 }
-// brush 7
+// brush 5
 {
 ( -272 -48 -16 ) ( -272 -47 -16 ) ( -272 -48 -15 ) __TB_empty 0 0 0 0.5 0.5
 ( 0 -192 -16 ) ( 0 -192 -15 ) ( 1 -192 -16 ) __TB_empty 0 0 0 0.5 0.5
@@ -77,23 +59,23 @@
 ( 128 240 16 ) ( 129 240 16 ) ( 128 240 17 ) __TB_empty 0 0 0 0.5 0.5
 ( -256 -48 -16 ) ( -256 -48 -15 ) ( -256 -47 -16 ) __TB_empty 0 0 0 0.5 0.5
 }
-// brush 8
+// brush 6
 {
 ( -272 -48 -16 ) ( -272 -47 -16 ) ( -272 -48 -15 ) vegas/fancybrick_1 0 15 0 1 1
-( 0 -192 -16 ) ( 0 -192 -15 ) ( 1 -192 -16 ) vegas/fancybrick_1 0 15 0 1 1
+( 0 -592 -16 ) ( 0 -592 -15 ) ( 1 -592 -16 ) vegas/fancybrick_1 0 15 0 1 1
 ( 128 80 16 ) ( 129 80 16 ) ( 128 81 16 ) vegas/fancybrick_1 0 15 0 1 1
-( 128 80 176 ) ( 128 81 176 ) ( 129 80 176 ) vegas/fancybrick_1 0 15 0 1 1
+( 128 80 272 ) ( 128 81 272 ) ( 129 80 272 ) vegas/fancybrick_1 0 15 0 1 1
 ( 128 240 16 ) ( 129 240 16 ) ( 128 240 17 ) vegas/fancybrick_1 0 15 0 1 1
 ( -256 -48 -16 ) ( -256 -48 -15 ) ( -256 -47 -16 ) vegas/fancybrick_1 0 15 0 1 1
 }
-// brush 9
+// brush 7
 {
-( -256 -48 176 ) ( -256 -47 176 ) ( -256 -48 177 ) vegas/outwardd1btw 0 0 0 0.5 0.5
-( 0 -192 176 ) ( 0 -192 177 ) ( 1 -192 176 ) vegas/outwardd1btw 0 0 0 0.5 0.5
-( 0 -48 176 ) ( 1 -48 176 ) ( 0 -47 176 ) vegas/outwardd1btw 0 0 0 0.5 0.5
-( 128 80 208 ) ( 128 81 208 ) ( 129 80 208 ) vegas/outwardd1btw 0 0 0 0.5 0.5
-( 128 240 208 ) ( 129 240 208 ) ( 128 240 209 ) vegas/outwardd1btw 0 0 0 0.5 0.5
-( 128 80 208 ) ( 128 80 209 ) ( 128 81 208 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( -256 -48 272 ) ( -256 -47 272 ) ( -256 -48 273 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( 0 -592 272 ) ( 0 -592 273 ) ( 1 -592 272 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( 0 -48 272 ) ( 1 -48 272 ) ( 0 -47 272 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( 128 80 304 ) ( 128 81 304 ) ( 129 80 304 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( 128 240 304 ) ( 129 240 304 ) ( 128 240 305 ) vegas/outwardd1btw 0 0 0 0.5 0.5
+( 528 80 304 ) ( 528 80 305 ) ( 528 81 304 ) vegas/outwardd1btw 0 0 0 0.5 0.5
 }
 }
 // entity 1
@@ -103,17 +85,301 @@
 }
 // entity 2
 {
-"classname" "light"
-"origin" "-72 24 136"
+"classname" "misc_model"
+"origin" "64 -160 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
 // entity 3
 {
-"classname" "misc_model"
-"origin" "0 96 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"classname" "weapon_shotgun"
+"origin" "-80 192 32"
 }
 // entity 4
 {
-"classname" "weapon_shotgun"
-"origin" "-16 16 32"
+"classname" "misc_model"
+"origin" "48 -192 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 5
+{
+"classname" "misc_model"
+"origin" "-32 -160 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 6
+{
+"classname" "misc_model"
+"origin" "-32 -192 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 7
+{
+"classname" "misc_model"
+"origin" "-112 -160 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 8
+{
+"classname" "misc_model"
+"origin" "-112 -192 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 9
+{
+"classname" "misc_model"
+"origin" "-208 -176 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 10
+{
+"classname" "misc_model"
+"origin" "-208 -208 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 11
+{
+"classname" "misc_model"
+"origin" "224 64 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 12
+{
+"classname" "misc_model"
+"origin" "208 32 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 13
+{
+"classname" "misc_model"
+"origin" "144 0 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 90 0"
+}
+// entity 14
+{
+"classname" "misc_model"
+"origin" "288 -16 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 -90 0"
+}
+// entity 15
+{
+"classname" "misc_model"
+"origin" "256 0 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 -90 0"
+}
+// entity 16
+{
+"classname" "misc_model"
+"origin" "208 -80 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 17
+{
+"classname" "misc_model"
+"origin" "224 -48 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 18
+{
+"classname" "misc_model"
+"origin" "-192 -256 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 19
+{
+"classname" "misc_model"
+"origin" "-208 -288 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 20
+{
+"classname" "misc_model"
+"origin" "-112 -256 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 21
+{
+"classname" "misc_model"
+"origin" "-112 -288 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 22
+{
+"classname" "misc_model"
+"origin" "-32 -256 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 23
+{
+"classname" "misc_model"
+"origin" "-32 -288 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 24
+{
+"classname" "misc_model"
+"origin" "64 -240 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 25
+{
+"classname" "misc_model"
+"origin" "64 -272 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 26
+{
+"classname" "light"
+"origin" "344 -8 136"
+}
+// entity 27
+{
+"classname" "light"
+"origin" "-216 -424 136"
+}
+// entity 28
+{
+"classname" "light"
+"origin" "-168 24 88"
+}
+// entity 29
+{
+"classname" "misc_model"
+"origin" "176 -16 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 90 0"
+}
+// entity 30
+{
+"classname" "light"
+"origin" "328 -408 136"
+}
+// entity 31
+{
+"classname" "light"
+"origin" "200 72 168"
+}
+// entity 32
+{
+"classname" "misc_model"
+"origin" "-208 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 33
+{
+"classname" "misc_model"
+"origin" "-208 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 34
+{
+"classname" "misc_model"
+"origin" "-128 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 35
+{
+"classname" "misc_model"
+"origin" "-128 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 36
+{
+"classname" "misc_model"
+"origin" "32 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 37
+{
+"classname" "misc_model"
+"origin" "32 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 38
+{
+"classname" "misc_model"
+"origin" "-48 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 39
+{
+"classname" "misc_model"
+"origin" "-48 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 40
+{
+"classname" "misc_model"
+"origin" "192 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 41
+{
+"classname" "misc_model"
+"origin" "192 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 42
+{
+"classname" "misc_model"
+"origin" "112 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 43
+{
+"classname" "misc_model"
+"origin" "112 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 44
+{
+"classname" "misc_model"
+"origin" "368 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
+}
+// entity 45
+{
+"classname" "misc_model"
+"origin" "368 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 46
+{
+"classname" "misc_model"
+"origin" "288 224 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 180 0"
+}
+// entity 47
+{
+"classname" "misc_model"
+"origin" "288 192 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 180 0"
 }
