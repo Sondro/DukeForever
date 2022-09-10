@@ -222,13 +222,6 @@ void SP_trigger_once(gentity_t* ent);
 void SP_trigger_setskill(gentity_t* ent);
 void SP_trigger_counter(gentity_t* ent);
 
-void SP_weapon_nailgun(gentity_t* self);
-void SP_weapon_supershotgun(gentity_t* self);
-void SP_weapon_supernailgun(gentity_t* self);
-void SP_weapon_grenadelauncher(gentity_t* self);
-void SP_weapon_rocketlauncher(gentity_t* self);
-void SP_weapon_lightning(gentity_t* self);
-
 void monster_ogre(gentity_t* self);
 void monster_ogre_marksman(gentity_t* self);
 void monster_dog(gentity_t* self);
@@ -270,12 +263,9 @@ spawn_t	spawns[] = {
 	{"func_group", SP_info_null},
 	{"func_timer", SP_func_timer},			// rename trigger_timer?	
 
-	{"weapon_supershotgun", SP_weapon_supershotgun},
-	{"weapon_nailgun", SP_weapon_nailgun},
-	{"weapon_supernailgun", SP_weapon_supernailgun},
-	{"weapon_grenadelauncher", SP_weapon_grenadelauncher},
-	{"weapon_rocketlauncher", SP_weapon_rocketlauncher},
-	{"weapon_thunderbolt", SP_weapon_lightning},
+	{"weapon_pistol", SP_weapon_pistol},
+	{"weapon_rpg", SP_weapon_rpg},
+	{"weapon_shotgun", SP_weapon_shotgun},
 
 	// Triggers are brush objects that cause an effect when contacted
 	// by a living player, usually involving firing targets.

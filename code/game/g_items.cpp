@@ -315,16 +315,16 @@ void weapon_touch(gentity_t* self, gentity_t* other, trace_t* trace) {
 
 /*
 ================
-SP_weapon_supershotgun
+generic_weapon_pickup
 ================
 */
-void SP_weapon_supershotgun(gentity_t* self) {
+void generic_weapon_pickup(gentity_t* self, char *weaponName, char *weaponWorldModel, int itemWeaponType ) {
 	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
 	self->touch = weapon_touch;
 	self->itemAmmoWeaponFlag = 5;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_shot.md3");
-	//self->itemWeapon = WP_SUPER_SHOTGUN;
-	self->netname = "Double-barrelled Shotgun";
+	self->s.modelindex = G_ModelIndex(weaponWorldModel);
+	self->itemWeapon = (weapon_t)itemWeaponType;
+	self->netname = weaponName;
 	VectorSet(self->r.mins, -16, -16, 0);
 	VectorSet(self->r.maxs, 16, 16, 56);
 	self->r.contents = CONTENTS_TRIGGER;
@@ -334,117 +334,6 @@ void SP_weapon_supershotgun(gentity_t* self) {
 	G_SetOrigin(self, self->s.origin);
 	VectorCopy(self->s.angles, self->s.apos.trBase);
 }
-
-/*
-=============
-SP_weapon_nailgun
-=============
-*/
-void SP_weapon_nailgun(gentity_t* self) {
-	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
-	self->touch = weapon_touch;
-	self->itemAmmoWeaponFlag = 30;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_nail.md3");
-	//self->itemWeapon = WP_NAILGUN;
-	self->netname = "nailgun";
-	VectorSet(self->r.mins, -16, -16, 0);
-	VectorSet(self->r.maxs, 16, 16, 56);
-	self->r.contents = CONTENTS_TRIGGER;
-	self->noise1 = G_SoundIndex("sound/weapons/pkup.wav");
-	engine->SV_LinkEntity(self);
-
-	G_SetOrigin(self, self->s.origin);
-	VectorCopy(self->s.angles, self->s.apos.trBase);
-}
-
-/*
-=============
-SP_weapon_supernailgun
-=============
-*/
-void SP_weapon_supernailgun(gentity_t* self) {
-	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
-	self->touch = weapon_touch;
-	self->itemAmmoWeaponFlag = 30;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_nail2.md3");
-//	self->itemWeapon = WP_SUPER_NAILGUN;
-	self->netname = "Super Nailgun";
-	VectorSet(self->r.mins, -16, -16, 0);
-	VectorSet(self->r.maxs, 16, 16, 56);
-	self->r.contents = CONTENTS_TRIGGER;
-	self->noise1 = G_SoundIndex("sound/weapons/pkup.wav");
-	engine->SV_LinkEntity(self);
-
-	G_SetOrigin(self, self->s.origin);
-	VectorCopy(self->s.angles, self->s.apos.trBase);
-}
-
-/*
-=============
-SP_weapon_grenadelauncher
-=============
-*/
-void SP_weapon_grenadelauncher(gentity_t* self) {
-	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
-	self->itemAmmoWeaponFlag = 5;
-	self->touch = weapon_touch;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_rock.md3");
-	//self->itemWeapon = WP_GRENADE_LAUNCHER;
-	self->netname = "Grenade Launcher";
-	VectorSet(self->r.mins, -16, -16, 0);
-	VectorSet(self->r.maxs, 16, 16, 56);
-	self->r.contents = CONTENTS_TRIGGER;
-	self->noise1 = G_SoundIndex("sound/weapons/pkup.wav");
-	engine->SV_LinkEntity(self);
-
-	G_SetOrigin(self, self->s.origin);
-	VectorCopy(self->s.angles, self->s.apos.trBase);
-}
-
-/*
-=============
-SP_weapon_rocketlauncher
-=============
-*/
-void SP_weapon_rocketlauncher(gentity_t* self) {
-	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
-	self->itemAmmoWeaponFlag = 5;
-	self->touch = weapon_touch;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_rock2.md3");
-//	self->itemWeapon = WP_ROCKET_LAUNCHER;
-	self->netname = "Rocket Launcher";
-	VectorSet(self->r.mins, -16, -16, 0);
-	VectorSet(self->r.maxs, 16, 16, 56);
-	self->r.contents = CONTENTS_TRIGGER;
-	self->noise1 = G_SoundIndex("sound/weapons/pkup.wav");
-	engine->SV_LinkEntity(self);
-
-	G_SetOrigin(self, self->s.origin);
-	VectorCopy(self->s.angles, self->s.apos.trBase);
-}
-
-/*
-=============
-SP_weapon_lightning
-=============
-*/
-void SP_weapon_lightning(gentity_t* self) {
-	self->s.clientTransformAnim = CLIENT_TRANSFORM_BOB_AND_ROTATE;
-	self->itemAmmoWeaponFlag = 15;
-	self->touch = weapon_touch;
-	self->s.modelindex = G_ModelIndex("models/weapons2/g_light.md3");
-	//self->itemWeapon = WP_LIGHTNING;
-	self->netname = "Thunderbolt";
-	VectorSet(self->r.mins, -16, -16, 0);
-	VectorSet(self->r.maxs, 16, 16, 56);
-	self->r.contents = CONTENTS_TRIGGER;
-	self->noise1 = G_SoundIndex("sound/weapons/pkup.wav");
-	engine->SV_LinkEntity(self);
-
-	G_SetOrigin(self, self->s.origin);
-	VectorCopy(self->s.angles, self->s.apos.trBase);
-}
-
 
 /*
 ===============================================================================

@@ -1243,4 +1243,11 @@ extern vec3_t	muzzle;
 
 void CalcMuzzlePointOrigin(gentity_t* ent, vec3_t origin, vec3_t forward, vec3_t right, vec3_t up, vec3_t muzzlePoint);
 
+void generic_weapon_pickup(gentity_t* self, char* weaponName, char* weaponWorldModel, int itemWeaponType);
+
+#define DECLARE_ITEM_PICKUP(weaponClass, weaponName, weaponWorldModel, itemWeaponType) \
+	__forceinline void SP_##weaponClass(gentity_t* self) { \
+		generic_weapon_pickup(self, weaponName, weaponWorldModel, itemWeaponType); \
+	}
+
 #include "../superscript/generated/generated_game_global.h"

@@ -5,6 +5,8 @@ $offset 12 4 -13
 $model "models/weapons/rpg/r.md3"
 $firesound "sound/weapons/guncock.wav"
 $firetime 300
+$worldmodel "models/weapons/w_rpg/w_rpg.md3"
+$name "RPG"
 
 // First person animation information.
 $WEAPON_ANIMATION_IDLE_START 119

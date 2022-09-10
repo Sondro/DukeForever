@@ -16,6 +16,9 @@ namespace QuakeToC
         public string modelpath;
         public string filename;
 
+        public string name;
+        public string worldmodel;
+
         // Weapon Info
         public float[] offset = new float[3];
         public int weaponFireTime;
@@ -358,7 +361,15 @@ namespace QuakeToC
                 {
                     firesoundpath = GetNextToken(tokens, ref i);
                 }
-                
+                else if (t == "$name")
+                {
+                    name = GetNextToken(tokens, ref i);
+                    name = name.Replace("_", " ");
+                }
+                else if (t == "$worldmodel")
+                {
+                    worldmodel = GetNextToken(tokens, ref i);
+                }
                 else if (t == "$WEAPON_ANIMATION_IDLE_START")
                 {
                     WEAPON_ANIMATION_IDLE_START = int.Parse(GetNextToken(tokens, ref i));

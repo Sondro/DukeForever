@@ -99,7 +99,7 @@
 // entity 1
 {
 "classname" "info_player_start"
-"origin" "-80 16 40"
+"origin" "-224 32 40"
 }
 // entity 2
 {
@@ -111,4 +111,9 @@
 "classname" "misc_model"
 "origin" "0 96 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 4
+{
+"classname" "weapon_shotgun"
+"origin" "-16 16 32"
 }

@@ -142,6 +142,16 @@ namespace QuakeToC
 
             for (int i = 0; i < qcFiles.Count; i++)
             {
+                if (qcFiles[i].worldmodel != null && qcFiles[i].worldmodel != "")
+                {
+                    servertext += string.Format("DECLARE_ITEM_PICKUP({0}, {1}, {2}, {3});\n", qcFiles[i].weaponId.ToLower(), qcFiles[i].name, qcFiles[i].worldmodel, qcFiles[i].weaponId);
+                }
+            }
+
+            servertext += "\n";
+
+            for (int i = 0; i < qcFiles.Count; i++)
+            {
                 foreach (QCfile.Function f in qcFiles[i].functions)
                 {
                     servertext += "__forceinline void " + f.name + "(gentity_t *self) {";

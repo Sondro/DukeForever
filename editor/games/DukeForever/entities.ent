@@ -2081,7 +2081,7 @@ WEAPON_* ENTITIES
 =============================================================================
 -->
 
-<point name="weapon_bfg" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons2/bfg/bfg.md3">
+<point name="weapon_rpg" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons/w_rpg/w_rpg.md3">
 Big Freaking Gun.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="5">Time in seconds before item respawns after being picked up (default 5, -1 = never respawn).</real>
@@ -2116,7 +2116,7 @@ And this would turn it back off:
 =============================================================================
 -->
 
-<point name="weapon_gauntlet" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons2/gauntlet/gauntlet.md3">
+<point name="weapon_pistol" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons/w_pistol/w_pistol.md3">
 Gauntlet.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="5">Time in seconds before item respawns after being picked up (default 5, -1 = never respawn).</real>
@@ -2150,7 +2150,7 @@ And this would turn it back off:
 =============================================================================
 -->
 
-<point name="weapon_grapplinghook" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons2/grapple/grapple.md3">
+<point name="weapon_shotgun" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons/w_shotgun/w_shotgun.md3">
 Grappling Hook. Spawns in the game and works but is unskinned.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="5">Time in seconds before item respawns after being picked up (default 5, -1 = never respawn).</real>
