@@ -17,6 +17,7 @@ int r_currentDxrEntities = -1;
 
 struct dxrMeshIntance_t {
 	int startVertex;
+	float objectToWorld[16];
 };
 
 dxrMeshIntance_t meshInstanceData[MAX_VISEDICTS];
@@ -121,6 +122,7 @@ void GL_CreateTopLevelAccelerationStructs(bool forceUpdate) {
 		{
 			// World matrix is always a identity.
 			static DirectX::XMMATRIX worldmatrix = DirectX::XMMatrixIdentity();
+			memcpy(meshInstanceData[0].objectToWorld, &worldmatrix, sizeof(float) * 16);
 			m_topLevelASGenerator.AddInstance(dxrMeshList[0]->buffers.pResult.Get(), worldmatrix, 0, 0xFF, false);
 		}
 
@@ -130,6 +132,7 @@ void GL_CreateTopLevelAccelerationStructs(bool forceUpdate) {
 		if (dxrMeshList[0]->needsAlphaRender) {
 			static DirectX::XMMATRIX worldmatrix = DirectX::XMMatrixIdentity();
 			meshInstanceData[1].startVertex = dxrMeshList[1]->startSceneVertex;
+			memcpy(meshInstanceData[1].objectToWorld, &worldmatrix, sizeof(float) * 16);
 			m_topLevelASGenerator.AddInstance(dxrMeshList[1]->buffers.pResult.Get(), worldmatrix, 1, 0x20, true);
 			numWorldModels = 2;
 		}
@@ -147,7 +150,7 @@ void GL_CreateTopLevelAccelerationStructs(bool forceUpdate) {
 				continue;
 
 			meshInstanceData[i + numWorldModels].startVertex = mesh->startSceneVertex;
-
+			memcpy(meshInstanceData[i + numWorldModels].objectToWorld, currententity->dxrTransform, sizeof(float) * 16);
 			switch (qmodel->type)
 			{
 			case MOD_POLY:

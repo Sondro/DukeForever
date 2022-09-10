@@ -104,7 +104,7 @@ bool IsLightShadowed(float3 worldOrigin, float3 lightDir, float distance, float3
      ray.Origin = worldOrigin;
      ray.Direction = lightDir;
      ray.TMin = 0.01;
-     ray.TMax = distance;
+     ray.TMax = distance - 10;
      bool hit = true;
      
      // Initialize the ray payload
@@ -152,8 +152,9 @@ bool IsLightShadowed(float3 worldOrigin, float3 lightDir, float distance, float3
 	if(!shadowPayload.isHit)
 		return false;
 		
-	float world_dist = length(shadowPayload.vertinfo.xyz - worldOrigin);
-	return world_dist < distance - 2;
+	//float world_dist = length(shadowPayload.vertinfo.xyz - worldOrigin);
+	//return world_dist < distance - 2;
+	return true;
 }
 
 float3 FireSecondRay(float3 worldOrigin, float distance, float3 normal)
@@ -394,9 +395,9 @@ float packNormal(float3 color) {
   float3 vnormal = float3(0, 0, 0);
   for(int i = 0; i < 3; i++)
   {
-		vnormal.x += BTriVertex[vertId + i].normal.x * barycentrics[i];
-		vnormal.y += BTriVertex[vertId + i].normal.y * barycentrics[i];
-		vnormal.z += BTriVertex[vertId + i].normal.z * barycentrics[i];
+  		vnormal.x += BTriVertex[vertId + i].normal.x * barycentrics[i];
+  		vnormal.y += BTriVertex[vertId + i].normal.y * barycentrics[i];
+  		vnormal.z += BTriVertex[vertId + i].normal.z * barycentrics[i];
   }
 
   float4 vtangent = float4(0, 0, 0, 1);
@@ -414,6 +415,8 @@ float packNormal(float3 color) {
 		vbinormal.y += BTriVertex[vertId + i].binormal.y * barycentrics[i];
 		vbinormal.z += BTriVertex[vertId + i].binormal.z * barycentrics[i];
   }
+
+  vnormal = mul(vnormal, BInstanceProperties[InstanceID()].objectToWorld);
 
   float3 normal = normalize(vnormal);
   float3 orig_normal = normalize(vnormal);
@@ -439,8 +442,6 @@ float packNormal(float3 color) {
 		{
 			float3 lightPos = (lightInfo[i].origin_radius.xyz);
 			float3 centerLightDir = lightPos - worldOrigin;
-			float3 shadowLightDir = (worldOrigin + (normal * 5)) - lightPos;
-			float shadowDistance = length(shadowLightDir);
 			float lightDistance = length(centerLightDir);
 			float falloff = attenuation(lightInfo[i].origin_radius.w, 1.0, lightDistance, normal, normalize(centerLightDir));
 			float attentype = lightInfo[i].light_color.w;
@@ -448,12 +449,12 @@ float packNormal(float3 color) {
 			falloff = falloff - 0.1;  
 			
 			falloff = clamp(falloff, 0.0, 1.0);
-			
+
 			//bool isShadowed = dot(normal, centerLightDir) < 0;	  
 			//if(!isShadowed)
 			if(falloff > 0)
 			{
-					if(!IsLightShadowed(lightPos, normalize(shadowLightDir), shadowDistance, normal))
+					if(!IsLightShadowed(lightPos, -normalize(centerLightDir), lightDistance, normal))
 					{
 						float3 V = viewPos - worldOrigin;
 						float spec = CalcPBR(V, normal, normalize(centerLightDir), 0.5, float3(1, 1, 1), float3(0.5, 0.5, 0.5));
@@ -525,7 +526,7 @@ float packNormal(float3 color) {
   }
   else
   {
-	ndotl = float3(1, 1, 1) * 2;
+	ndotl = float3(1, 1, 1);
 	emissive = 2;
   }  
 

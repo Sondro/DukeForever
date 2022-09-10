@@ -34,4 +34,5 @@ struct STriVertex {
 struct SInstanceProperties
 {
 	int startVertex;
+	float4x4 objectToWorld;
 };

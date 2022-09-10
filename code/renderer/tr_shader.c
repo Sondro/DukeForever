@@ -1602,6 +1602,11 @@ static qboolean ParseShader( char **text )
 			shader.hasRaytracingReflection = qtrue;
 			continue;
 		}
+		else if (!Q_stricmp(token, "emissive"))
+		{
+			shader.isEmissive = qtrue;
+			continue;
+		}
 		else
 		{
 			ri.Printf( PRINT_WARNING, "WARNING: unknown general shader parameter '%s' in '%s'\n", token, shader.name );

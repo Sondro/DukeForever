@@ -394,6 +394,7 @@ typedef struct shader_s {
 	qboolean	hasRaytracingReflection;
 	qboolean	isLitSurface;
 	qboolean	alphaSurface;
+	qboolean	isEmissive;
 
 	float		atlas_x;
 	float		atlas_y;
