@@ -396,6 +396,9 @@ typedef struct shader_s {
 	qboolean	alphaSurface;
 	qboolean	isEmissive;
 
+	int			areaLight;
+	vec3_t		areaLightColor;
+
 	float		atlas_x;
 	float		atlas_y;
 	float		atlas_width;

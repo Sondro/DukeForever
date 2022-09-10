@@ -431,7 +431,7 @@ float packNormal(float3 color) {
   float spec_contrib = 0.0;
   float emissive = 1;
   float3 spec_lit = 0;
-  if(BTriVertex[vertId + 0].st.z != 2 && BTriVertex[vertId + 0].st.z != 3)
+  if(BTriVertex[vertId + 0].st.z != 2 && BTriVertex[vertId + 0].st.z != 3 && BTriVertex[vertId + 0].st.z != 7)
   {
 	for(int i = 0; i < 120; i++)
 	{	 		
@@ -578,9 +578,9 @@ float packNormal(float3 color) {
   payload.worldOrigin.w = 0;
 
 
-  if (BTriVertex[vertId + 0].st.z == 5)
+  if (BTriVertex[vertId + 0].st.z == 5 || BTriVertex[vertId + 0].st.z == 7)
   {
-	  payload.worldNormal.xyz = reflect(WorldRayDirection(), normal);
+	  payload.worldNormal.xyz = reflect(WorldRayDirection(), float3(normal.x * 1.2, normal.y * 1.2, normal.z));
   }
   else
   {

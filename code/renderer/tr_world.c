@@ -354,51 +354,7 @@ static void R_AddRaytacedWorldSurface(msurface_t* surface)
 	if (surface->shader == NULL)
 		return;
 
-	int lightRange = 0;
-	vec3_t lightColor = { 1, 1, 1 };
-
-	if (strstr(surface->shader->name, "light")) {
-		lightRange = 100;
-		lightColor[0] = 233.0f / 255.0f;
-		lightColor[1] = 233.0f / 255.0f;
-		lightColor[2] = 125.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "flame1_hell")) {
-		lightRange = 400;
-		lightColor[0] = 226.0f / 255.0f;
-		lightColor[1] = 184.0f / 255.0f;
-		lightColor[2] = 34.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "flame")) {
-		lightRange = 150;
-		lightColor[0] = 226.0f / 255.0f;
-		lightColor[1] = 184.0f / 255.0f;
-		lightColor[2] = 34.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "LAVA")) {
-		lightRange = 500;
-		lightColor[0] = 190.0f / 255.0f;
-		lightColor[1] = 0.0f / 255.0f;
-		lightColor[2] = 0.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "tim_hell")) {
-		lightRange = 1000;
-		lightColor[0] = 128.0f / 255.0f;
-		lightColor[1] = 50.0f / 255.0f;
-		lightColor[2] = 50.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "SKY")) {
-		lightRange = 1000;
-		lightColor[0] = 215.0f / 255.0f;
-		lightColor[1] = 184.0f / 255.0f;
-		lightColor[2] = 120.0f / 255.0f;
-	}
-	else if (strstr(surface->shader->name, "skies")) {
-		lightRange = 300;
-		lightColor[0] = 215.0f / 255.0f;
-		lightColor[1] = 184.0f / 255.0f;
-		lightColor[2] = 120.0f / 255.0f;
-	}
+	int lightRange = surface->shader->areaLight;	
 
 	if (lightRange == 0)
 		return;
@@ -430,7 +386,7 @@ static void R_AddRaytacedWorldSurface(msurface_t* surface)
 
 	VectorNormalize(plane_normal);
 
-	GL_RegisterWorldAreaLight(plane_normal, mins, maxs, lightStyle, lightRange, lightColor[0], lightColor[1], lightColor[2]);
+	GL_RegisterWorldAreaLight(plane_normal, mins, maxs, lightStyle, lightRange, surface->shader->areaLightColor[0], surface->shader->areaLightColor[1], surface->shader->areaLightColor[2]);
 }
 
 /*

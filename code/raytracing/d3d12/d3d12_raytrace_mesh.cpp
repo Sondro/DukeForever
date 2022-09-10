@@ -341,10 +341,11 @@ void GL_LoadBottomLevelAccelStruct(dxrMesh_t* mesh, msurface_t* surfaces, int nu
 				continue;
 			}
 
-			if (fa->shader->hasRaytracingReflection)
+			if(fa->shader->hasRaytracingReflection && fa->shader->isEmissive)
+				materialInfo = 7;
+			else if (fa->shader->hasRaytracingReflection)
 				materialInfo = 5;
-
-			if (fa->shader->isEmissive)
+			else if (fa->shader->isEmissive)
 				materialInfo = 2;
 		}
 
@@ -380,7 +381,7 @@ void GL_LoadBottomLevelAccelStruct(dxrMesh_t* mesh, msurface_t* surfaces, int nu
 			v.xyz[1] = tri->verts[d].xyz[1];
 			v.xyz[2] = tri->verts[d].xyz[2];
 			v.st[0] = tri->verts[d].st[0];
-			v.st[1] = tri->verts[d].st[1];
+			v.st[1] = 1.0 - tri->verts[d].st[1];
 			v.normal[0] = tri->verts[d].normal[0];
 			v.normal[1] = tri->verts[d].normal[1];
 			v.normal[2] = tri->verts[d].normal[2];
@@ -712,9 +713,11 @@ void* GL_LoadMD3RaytracedMesh(md3Header_t* mod, int frame) {
 		dxrVertex_t* meshVertexes = new dxrVertex_t[surf->numVerts];
 
 		int materialInfo = 1;
-		if (tr.shaders[shader->shaderIndex]->hasRaytracingReflection)
+		if (tr.shaders[shader->shaderIndex]->hasRaytracingReflection && tr.shaders[shader->shaderIndex]->isEmissive)
+			materialInfo = 7;
+		else if (tr.shaders[shader->shaderIndex]->hasRaytracingReflection)
 			materialInfo = 5;
-		if (tr.shaders[shader->shaderIndex]->isEmissive)
+		else if (tr.shaders[shader->shaderIndex]->isEmissive)
 			materialInfo = 2;
 
 		LerpMeshVertexes(materialInfo, surf, 0.0f, frame, frame, meshVertexes, x, y, w, h);

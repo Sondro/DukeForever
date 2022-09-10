@@ -80,7 +80,7 @@ HitInfo FirePrimaryRay() {
 
       // Parameter name: RayFlags
       // Flags can be used to specify the behavior upon hitting a surface
-      RAY_FLAG_CULL_FRONT_FACING_TRIANGLES,
+      RAY_FLAG_NONE,
 
       // Parameter name: InstanceInclusionMask
       // Instance inclusion mask, which can be used to mask out some geometry to
@@ -159,7 +159,7 @@ float getFogFactor(float d, float FogMax, float FogMin)
 		gLightOutput[launchIndex] = float4(1, 1, 1, 1);
 		gLightOutput[launchIndex] = float4(1, 1, 1, 1);
 	}
-	else if(hit.lightColor.w == 5)
+	else if(hit.lightColor.w == 5 || hit.lightColor.w == 7)
 	{		 
 		  RayDesc ray;
 		  HitInfo payload;
@@ -234,6 +234,10 @@ float getFogFactor(float d, float FogMax, float FogMin)
 		   {
 				//gOutput[launchIndex].xyz = lerp(gOutput[launchIndex], float4(payload.colorAndDistance.rgb, 1.f), 0.3);
 				float reflectValue = ((gLightOutput[launchIndex].r + gLightOutput[launchIndex].g + gLightOutput[launchIndex].b) / 3);
+				reflectValue = pow(reflectValue, 1.5);
+				if (reflectValue >= 1)
+					reflectValue = ((gOutput[launchIndex].r + gOutput[launchIndex].g + gOutput[launchIndex].b) / 3);
+
 				gLightOutput[launchIndex].xyz = lerp(gLightOutput[launchIndex].xyz, payload.colorAndDistance.rgb, reflectValue);
 				gOutput[launchIndex].xyz.xyz = lerp(gOutput[launchIndex].xyz, payload.lightColor.rgb, reflectValue);
 		   }

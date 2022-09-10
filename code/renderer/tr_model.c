@@ -386,7 +386,12 @@ static qboolean R_LoadMD3 (model_t *mod, int lod, void *buffer, const char *mod_
 
 	COM_StripExtension(mod_name, shaderName);
 	COM_DefaultExtension(shaderName, sizeof(shaderName), ".tga");
-	defaultShader = R_FindShader(shaderName, -1, qfalse);
+
+
+	if (FS_FileExists(shaderName))
+	{
+		defaultShader = R_FindShader(shaderName, -1, qfalse);
+	}
 
 	// swap all the surfaces
 	surf = (md3Surface_t *) ( (byte *)mod->md3[lod] + mod->md3[lod]->ofsSurfaces );

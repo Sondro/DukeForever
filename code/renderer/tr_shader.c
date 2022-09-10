@@ -1560,11 +1560,21 @@ static qboolean ParseShader( char **text )
 		{
 			ParseSkyParms( text );
 			continue;
-		}
-		// light <value> determines flaring in q3map, not needed here
-		else if ( !Q_stricmp(token, "light") ) 
+		}		
+		else if ( !Q_stricmp(token, "arealight") ) 
 		{
 			token = COM_ParseExt( text, qfalse );
+			shader.areaLight = atoi(token);
+
+			token = COM_ParseExt(text, qfalse);
+			shader.areaLightColor[0] = atof(token) / 255.0f;
+
+			token = COM_ParseExt(text, qfalse);
+			shader.areaLightColor[1] = atof(token) / 255.0f;
+
+			token = COM_ParseExt(text, qfalse);
+			shader.areaLightColor[2] = atof(token) / 255.0f;
+
 			continue;
 		}
 		// cull <face>
