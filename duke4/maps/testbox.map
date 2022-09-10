@@ -16,12 +16,12 @@
 }
 // brush 1
 {
-( -272 -864 -16 ) ( -272 -863 -16 ) ( -272 -864 -15 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( -16 -1024 -16 ) ( -16 -1024 -15 ) ( -15 -1024 -16 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( 112 -736 16 ) ( 113 -736 16 ) ( 112 -735 16 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( 112 -736 400 ) ( 112 -735 400 ) ( 113 -736 400 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( -16 -1008 -16 ) ( -15 -1008 -16 ) ( -16 -1008 -15 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( 960 -736 16 ) ( 960 -736 17 ) ( 960 -735 16 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -56.090056986669424 -2142.3773887591074 -16 ) ( -56.090056986669424 -2141.3773887591074 -16 ) ( -56.090056986669424 -2142.3773887591074 -15 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -207.4374091285539 -2302.377388759108 -16 ) ( -207.4374091285539 -2302.377388759108 -15 ) ( -206.4374091285539 -2302.377388759108 -16 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -79.4374091285539 -2014.3773887591074 16 ) ( -78.4374091285539 -2014.3773887591074 16 ) ( -79.4374091285539 -2013.3773887591074 16 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -79.4374091285539 -2014.3773887591074 400 ) ( -79.4374091285539 -2013.3773887591074 400 ) ( -78.4374091285539 -2014.3773887591074 400 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -207.4374091285539 -2286.3773887591074 -16 ) ( -206.4374091285539 -2286.3773887591074 -16 ) ( -207.4374091285539 -2286.3773887591074 -15 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( 875.257971541059 -2014.3773887591074 16 ) ( 875.257971541059 -2014.3773887591074 17 ) ( 875.257971541059 -2013.3773887591074 16 ) vegas/casinowall9CBC 0 13 0 1 1.5
 }
 // brush 2
 {
@@ -53,7 +53,7 @@
 // brush 5
 {
 ( -256 -48 384 ) ( -256 -47 384 ) ( -256 -48 385 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
-( 0 -1200 384 ) ( 0 -1200 385 ) ( 1 -1200 384 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
+( 0 -3760.846642275577 384 ) ( 0 -3760.846642275577 385 ) ( 1 -3760.846642275577 384 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
 ( 0 -48 384 ) ( 1 -48 384 ) ( 0 -47 384 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
 ( 128 80 416 ) ( 128 81 416 ) ( 129 80 416 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
 ( 128 1259.1947169320447 416 ) ( 129 1259.1947169320447 416 ) ( 128 1259.1947169320447 417 ) brothel/slwmhceiling1RC 0 0 0 0.5 0.5
@@ -62,7 +62,7 @@
 // brush 6
 {
 ( -304 -816 -32 ) ( -304 -815 -32 ) ( -304 -816 -31 ) vegas/casinowall9CBC 0 13 0 1 1.5
-( -48 -1040 -32 ) ( -48 -1040 -31 ) ( -47 -1040 -32 ) vegas/casinowall9CBC 0 13 0 1 1.5
+( -48 -2373.0935720344182 -32 ) ( -48 -2373.0935720344182 -31 ) ( -47 -2373.0935720344182 -32 ) vegas/casinowall9CBC 0 13 0 1 1.5
 ( 80 -688 0 ) ( 81 -688 0 ) ( 80 -687 0 ) vegas/casinowall9CBC 0 13 0 1 1.5
 ( 80 -688 384 ) ( 80 -687 384 ) ( 81 -688 384 ) vegas/casinowall9CBC 0 13 0 1 1.5
 ( -48 -624 -32 ) ( -47 -624 -32 ) ( -48 -624 -31 ) vegas/casinowall9CBC 0 13 0 1 1.5
@@ -133,8 +133,8 @@
 }
 // brush 14
 {
-( 826.4393090226445 -1609.5929449307455 -16 ) ( 826.4393090226445 -1608.5929449307455 -16 ) ( 826.4393090226445 -1609.5929449307455 -15 ) vegas/casinowall9CBC 0 15 0 1 1.5
-( 1220.002417188578 -1042.9004770572642 16 ) ( 1220.002417188578 -1042.9004770572642 17 ) ( 1221.002417188578 -1042.9004770572642 16 ) vegas/casinowall9CBC 0 15 0 1 1.5
+( 801.974993810474 -1609.5929449307455 -16 ) ( 801.974993810474 -1608.5929449307455 -16 ) ( 801.974993810474 -1609.5929449307455 -15 ) vegas/casinowall9CBC 0 15 0 1 1.5
+( 1220.002417188578 -2468.153110482631 16 ) ( 1220.002417188578 -2468.153110482631 17 ) ( 1221.002417188578 -2468.153110482631 16 ) vegas/casinowall9CBC 0 15 0 1 1.5
 ( 1220.002417188578 -1481.5929449307455 16 ) ( 1221.002417188578 -1481.5929449307455 16 ) ( 1220.002417188578 -1480.5929449307455 16 ) vegas/casinowall9CBC 0 15 0 1 1.5
 ( 1220.002417188578 -1481.5929449307455 384 ) ( 1220.002417188578 -1480.5929449307455 384 ) ( 1221.002417188578 -1481.5929449307455 384 ) vegas/casinowall9CBC 0 15 0 1 1.5
 ( 1220.002417188578 -898.0807614014493 16 ) ( 1221.002417188578 -898.0807614014493 16 ) ( 1220.002417188578 -898.0807614014493 17 ) vegas/casinowall9CBC 0 15 0 1 1.5
@@ -527,6 +527,105 @@
 ( 4311.686738364167 107.40202984818461 16 ) ( 4311.686738364167 107.40202984818461 17 ) ( 4310.686744233186 107.40545592540502 16 ) vegas/casinowall9CBC 0 15 0 1 1.5
 ( 4413.644547137983 -2292.4346657297665 -16 ) ( 4413.644547137983 -2292.4346657297665 -15 ) ( 4413.647973215204 -2291.4346715987867 -16 ) vegas/casinowall9CBC 0 15 0 1 1.5
 }
+// brush 58
+{
+( -233.59408475887312 -718.8415318415996 -102.87736403924285 ) ( -233.59408475887312 -718.8415318415996 34.991107046742094 ) ( -233.59408475887312 -1062.7083237302434 -102.87736403924285 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -233.59408475887312 -1062.7083237302434 -102.87736403924285 ) ( -233.59408475887312 -1062.7083237302434 34.991107046742094 ) ( 794.4834668761168 -1062.7083237302434 -102.87736403924285 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -233.59408475887312 -718.8415318415996 -102.87736403924285 ) ( -233.59408475887312 -1062.7083237302434 -102.87736403924285 ) ( 794.4834668761168 -718.8415318415996 -102.87736403924285 ) brothel/slwcarpet1RC 0 0 0 0.5 0.5
+( 794.4834668761168 -718.8415318415996 27.53202473100525 ) ( 794.4834668761168 -1062.7083237302434 27.53202473100525 ) ( -233.59408475887312 -718.8415318415996 27.53202473100525 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 794.4834668761168 -626.0307234343124 -102.87736403924285 ) ( 794.4834668761168 -626.0307234343124 34.991107046742094 ) ( -233.59408475887312 -626.0307234343124 -102.87736403924285 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 824.2961386573369 -1062.7083237302434 -102.87736403924285 ) ( 824.2961386573369 -1062.7083237302434 34.991107046742094 ) ( 824.2961386573369 -718.8415318415996 -102.87736403924285 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+}
+// brush 59
+{
+( -233.59408475887312 -718.8415318415996 -89.01720893332215 ) ( -233.59408475887312 -718.8415318415996 48.85126215266276 ) ( -233.59408475887312 -1062.7083237302434 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -233.59408475887312 -2407.109546569064 -89.01720893332215 ) ( -233.59408475887312 -2407.109546569064 48.85126215266276 ) ( 794.4834668761168 -2407.109546569064 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -233.59408475887312 -718.8415318415996 -89.01720893332215 ) ( -233.59408475887312 -1062.7083237302434 -89.01720893332215 ) ( 794.4834668761168 -718.8415318415996 -89.01720893332215 ) brothel/slwcarpet1RC 0 0 0 0.5 0.5
+( 794.4834668761168 -718.8415318415996 41.39217983692592 ) ( 794.4834668761168 -1062.7083237302434 41.39217983692592 ) ( -233.59408475887312 -718.8415318415996 41.39217983692592 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 794.4834668761168 -650.6231531534681 -89.01720893332215 ) ( 794.4834668761168 -650.6231531534681 48.85126215266276 ) ( -233.59408475887312 -650.6231531534681 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 802.5510921566963 -1062.7083237302434 -89.01720893332215 ) ( 802.5510921566963 -1062.7083237302434 48.85126215266276 ) ( 802.5510921566963 -718.8415318415996 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+}
+// brush 60
+{
+( -253.03099888682476 -714.5712635233837 -89.01720893332215 ) ( -253.03099888682476 -714.5712635233837 48.85126215266276 ) ( -253.03099888682476 -1058.4380554120276 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -253.03099888682476 -954.6656100310306 -89.01720893332215 ) ( -253.03099888682476 -954.6656100310306 48.85126215266276 ) ( 775.0465527481653 -954.6656100310306 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( -253.03099888682476 -714.5712635233837 -89.01720893332215 ) ( -253.03099888682476 -1058.4380554120276 -89.01720893332215 ) ( 775.0465527481653 -714.5712635233837 -89.01720893332215 ) brothel/slwcarpet1RC 0 0 0 0.5 0.5
+( 775.0465527481653 -714.5712635233837 41.39217983692592 ) ( 775.0465527481653 -1058.4380554120276 41.39217983692592 ) ( -253.03099888682476 -714.5712635233837 41.39217983692592 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 775.0465527481653 -625.7539952633878 -89.01720893332215 ) ( 775.0465527481653 -625.7539952633878 48.85126215266276 ) ( -253.03099888682476 -625.7539952633878 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 327.7422795869009 -1058.4380554120276 -89.01720893332215 ) ( 327.7422795869009 -1058.4380554120276 48.85126215266276 ) ( 327.7422795869009 -714.5712635233837 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+}
+// brush 61
+{
+( 590.3309312482181 -709.8940636477165 -89.01720893332215 ) ( 590.3309312482181 -709.8940636477165 48.85126215266276 ) ( 590.3309312482181 -1053.7608555363609 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 235.90336497619867 -939.8747482674476 -89.01720893332215 ) ( 235.90336497619867 -939.8747482674476 48.85126215266276 ) ( 1263.980916611189 -939.8747482674476 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 235.90336497619867 -709.8940636477165 -89.01720893332215 ) ( 235.90336497619867 -1053.7608555363609 -89.01720893332215 ) ( 1263.980916611189 -709.8940636477165 -89.01720893332215 ) brothel/slwcarpet1RC 0 0 0 0.5 0.5
+( 1263.980916611189 -709.8940636477165 41.39217983692592 ) ( 1263.980916611189 -1053.7608555363609 41.39217983692592 ) ( 235.90336497619867 -709.8940636477165 41.39217983692592 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 1263.980916611189 -621.0767953877206 -89.01720893332215 ) ( 1263.980916611189 -621.0767953877206 48.85126215266276 ) ( 235.90336497619867 -621.0767953877206 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+( 802.804905250521 -1053.7608555363609 -89.01720893332215 ) ( 802.804905250521 -1053.7608555363609 48.85126215266276 ) ( 802.804905250521 -709.8940636477165 -89.01720893332215 ) brothel/slwcarpet1RC 0 15 0 1 1.5
+}
+// brush 62
+{
+( 706.8680353557763 -1120.7057610255806 494.5942013232854 ) ( 706.8680353557763 -1119.7057610255806 494.5942013232854 ) ( 706.8680353557763 -1120.7057610255806 495.5942013232854 ) vegas/ceiling1RC 1 32 0 1 1
+( 202.16705966887366 -1370.2213723569241 494.5942013232854 ) ( 202.16705966887366 -1370.2213723569241 495.5942013232854 ) ( 203.16705966887366 -1370.2213723569241 494.5942013232854 ) vegas/ceiling1RC 1 32 0 1 1
+( 202.16705966887366 -1120.7057610255806 382.5942013232855 ) ( 203.16705966887366 -1120.7057610255806 382.5942013232855 ) ( 202.16705966887366 -1119.7057610255806 382.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( 330.16705966887366 -992.7057610255805 384.4165501036271 ) ( 330.16705966887366 -991.7057610255805 384.4165501036271 ) ( 331.16705966887366 -992.7057610255805 384.4165501036271 ) vegas/ceiling1RC 1 32 0 1 1
+( 330.16705966887366 -1307.4693938596472 526.5942013232855 ) ( 331.16705966887366 -1307.4693938596472 526.5942013232855 ) ( 330.16705966887366 -1307.4693938596472 527.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( 760.7639682649833 -992.7057610255805 526.5942013232855 ) ( 760.7639682649833 -992.7057610255805 527.5942013232855 ) ( 760.7639682649833 -991.7057610255805 526.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+}
+// brush 63
+{
+( 129.7059768677226 -1124.071354191505 494.5942013232854 ) ( 129.7059768677226 -1123.071354191505 494.5942013232854 ) ( 129.7059768677226 -1124.071354191505 495.5942013232854 ) vegas/ceiling1RC 1 32 0 1 1
+( -374.9934583390999 -1373.5842100257346 494.5942013232854 ) ( -374.9934583390999 -1373.5842100257346 495.5942013232854 ) ( -373.9934583390999 -1373.5842100257346 494.5942013232854 ) vegas/ceiling1RC 1 32 0 1 1
+( -374.9934583390999 -1124.071354191505 382.5942013232855 ) ( -373.9934583390999 -1124.071354191505 382.5942013232855 ) ( -374.9934583390999 -1123.071354191505 382.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( -246.99345833909996 -996.071354191505 384.4165501036271 ) ( -246.99345833909996 -995.071354191505 384.4165501036271 ) ( -245.99345833909996 -996.071354191505 384.4165501036271 ) vegas/ceiling1RC 1 32 0 1 1
+( -246.99345833909996 -1310.8330722883293 526.5942013232855 ) ( -245.99345833909996 -1310.8330722883293 526.5942013232855 ) ( -246.99345833909996 -1310.8330722883293 527.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( 183.60298990074875 -996.071354191505 526.5942013232855 ) ( 183.60298990074875 -996.071354191505 527.5942013232855 ) ( 183.60298990074875 -995.071354191505 526.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+}
+// brush 64
+{
+( 136.14340610758774 -1829.5739025939645 492.7718525429438 ) ( 136.14340610758774 -1828.5739025939645 492.7718525429438 ) ( 136.14340610758774 -1829.5739025939645 493.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( -368.5572633983767 -2079.086758428196 492.7718525429438 ) ( -368.5572633983767 -2079.086758428196 493.7718525429438 ) ( -367.5572633983767 -2079.086758428196 492.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( -368.5572633983767 -1829.5739025939645 380.7718525429439 ) ( -367.5572633983767 -1829.5739025939645 380.7718525429439 ) ( -368.5572633983767 -1828.5739025939645 380.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( -240.55726339837662 -1701.5739025939645 382.5942013232855 ) ( -240.55726339837662 -1700.5739025939645 382.5942013232855 ) ( -239.55726339837662 -1701.5739025939645 382.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( -240.55726339837662 -2016.3356206907888 524.7718525429439 ) ( -239.55726339837662 -2016.3356206907888 524.7718525429439 ) ( -240.55726339837662 -2016.3356206907888 525.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( 190.0389644652746 -1701.5739025939645 524.7718525429439 ) ( 190.0389644652746 -1701.5739025939645 525.7718525429439 ) ( 190.0389644652746 -1700.5739025939645 524.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+}
+// brush 65
+{
+( 453.3045007542449 -1828.2083094280401 492.7718525429438 ) ( 453.3045007542449 -1827.20830942804 492.7718525429438 ) ( 453.3045007542449 -1828.2083094280401 493.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( -51.39740806582935 -2077.723920759385 492.7718525429438 ) ( -51.39740806582935 -2077.723920759385 493.7718525429438 ) ( -50.39740806582935 -2077.723920759385 492.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( -51.39740806582935 -1828.2083094280401 380.7718525429439 ) ( -50.39740806582935 -1828.2083094280401 380.7718525429439 ) ( -51.39740806582935 -1827.20830942804 380.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( 76.60259193417065 -1700.20830942804 382.5942013232855 ) ( 76.60259193417065 -1699.20830942804 382.5942013232855 ) ( 77.60259193417065 -1700.20830942804 382.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( 76.60259193417065 -2014.9719422621065 524.7718525429439 ) ( 77.60259193417065 -2014.9719422621065 524.7718525429439 ) ( 76.60259193417065 -2014.9719422621065 525.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( 507.20056790675085 -1700.20830942804 524.7718525429439 ) ( 507.20056790675085 -1700.20830942804 525.7718525429439 ) ( 507.20056790675085 -1699.20830942804 524.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+}
+// brush 66
+{
+( 713.3045007542444 -1826.2083094280401 492.7718525429438 ) ( 713.3045007542444 -1825.2083094280401 492.7718525429438 ) ( 713.3045007542444 -1826.2083094280401 493.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( 208.60259193417062 -2075.723920759385 492.7718525429438 ) ( 208.60259193417062 -2075.723920759385 493.7718525429438 ) ( 209.60259193417062 -2075.723920759385 492.7718525429438 ) vegas/ceiling1RC 1 32 0 1 1
+( 208.60259193417062 -1826.2083094280401 380.7718525429439 ) ( 209.60259193417062 -1826.2083094280401 380.7718525429439 ) ( 208.60259193417062 -1825.2083094280401 380.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( 336.6025919341706 -1698.20830942804 382.5942013232855 ) ( 336.6025919341706 -1697.20830942804 382.5942013232855 ) ( 337.6025919341706 -1698.20830942804 382.5942013232855 ) vegas/ceiling1RC 1 32 0 1 1
+( 336.6025919341706 -2012.9719422621065 524.7718525429439 ) ( 337.6025919341706 -2012.9719422621065 524.7718525429439 ) ( 336.6025919341706 -2012.9719422621065 525.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+( 767.2005679067499 -1698.20830942804 524.7718525429439 ) ( 767.2005679067499 -1698.20830942804 525.7718525429439 ) ( 767.2005679067499 -1697.20830942804 524.7718525429439 ) vegas/ceiling1RC 1 32 0 1 1
+}
+// brush 67
+{
+( 435.35083648095633 -608.9759961659729 408.4609059456287 ) ( 435.35083648095633 -607.9759961659729 408.4609059456287 ) ( 435.35083648095633 -608.9759961659729 409.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -430.59272601153066 -1158.7963488790522 408.4609059456287 ) ( -430.59272601153066 -1158.7963488790522 409.4609059456287 ) ( -429.59272601153066 -1158.7963488790522 408.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -430.59272601153066 -608.9759961659729 -6.558711746034248 ) ( -429.59272601153066 -608.9759961659729 -6.558711746034248 ) ( -430.59272601153066 -607.9759961659729 -6.558711746034248 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -302.59272601153066 -480.9759961659729 440.4609059456287 ) ( -302.59272601153066 -479.9759961659729 440.4609059456287 ) ( -301.59272601153066 -480.9759961659729 440.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -302.59272601153066 -1029.8436629220082 440.4609059456287 ) ( -301.59272601153066 -1029.8436629220082 440.4609059456287 ) ( -302.59272601153066 -1029.8436629220082 441.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( 538.2710622034948 -480.9759961659729 440.4609059456287 ) ( 538.2710622034948 -480.9759961659729 441.4609059456287 ) ( 538.2710622034948 -479.9759961659729 440.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+}
+// brush 68
+{
+( 399.9195218280365 -1272.0528944255773 408.4609059456287 ) ( 399.9195218280365 -1271.0528944255773 408.4609059456287 ) ( 399.9195218280365 -1272.0528944255773 409.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -466.0239758577425 -1821.8732471386566 408.4609059456287 ) ( -466.0239758577425 -1821.8732471386566 409.4609059456287 ) ( -465.0239758577425 -1821.8732471386566 408.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -466.0239758577425 -1272.0528944255773 -6.558711746034248 ) ( -465.0239758577425 -1272.0528944255773 -6.558711746034248 ) ( -466.0239758577425 -1271.0528944255773 -6.558711746034248 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -338.0239758577425 -1144.0528944255773 440.4609059456287 ) ( -338.0239758577425 -1143.0528944255773 440.4609059456287 ) ( -337.0239758577425 -1144.0528944255773 440.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( -338.0239758577425 -1692.9205611816126 440.4609059456287 ) ( -337.0239758577425 -1692.9205611816126 440.4609059456287 ) ( -338.0239758577425 -1692.9205611816126 441.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+( 502.84050092086125 -1144.0528944255773 440.4609059456287 ) ( 502.84050092086125 -1144.0528944255773 441.4609059456287 ) ( 502.84050092086125 -1143.0528944255773 440.4609059456287 ) vegas/casinowall6BBC 0 0 0 0.5 0.5
+}
 }
 // entity 1
 {
@@ -625,829 +724,952 @@
 // entity 15
 {
 "classname" "misc_model"
-"origin" "817.486 -607.942 16"
-"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
-"angles" "0 90 0"
-}
-// entity 16
-{
-"classname" "misc_model"
-"origin" "785.486 -591.942 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
-"angles" "0 90 0"
-}
-// entity 17
-{
-"classname" "misc_model"
 "origin" "875.698 -542.104 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 18
+// entity 16
 {
 "classname" "misc_model"
 "origin" "891.698 -510.104 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 19
+// entity 17
 {
 "classname" "misc_model"
 "origin" "833.449 -123.024 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 20
+// entity 18
 {
 "classname" "misc_model"
 "origin" "801.449 -107.024 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
+// entity 19
+{
+"classname" "misc_model"
+"origin" "4.44894 -567.196 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 20
+{
+"classname" "misc_model"
+"origin" "4.44894 -599.196 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
 // entity 21
-{
-"classname" "misc_model"
-"origin" "48 -592 16"
-"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
-}
-// entity 22
-{
-"classname" "misc_model"
-"origin" "64 -560 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
-}
-// entity 23
-{
-"classname" "misc_model"
-"origin" "-32 -560 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
-}
-// entity 24
-{
-"classname" "misc_model"
-"origin" "-32 -592 16"
-"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
-}
-// entity 25
 {
 "classname" "misc_model"
 "origin" "-112 -592 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 26
+// entity 22
 {
 "classname" "misc_model"
 "origin" "-112 -560 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 27
+// entity 23
 {
 "classname" "misc_model"
 "origin" "-208 -608 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 28
+// entity 24
 {
 "classname" "misc_model"
 "origin" "-208 -576 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 29
+// entity 25
 {
 "classname" "misc_model"
 "origin" "651.772 232.777 -5.80759"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 30
+// entity 26
 {
 "classname" "misc_model"
 "origin" "651.772 264.777 -5.80759"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 31
+// entity 27
 {
 "classname" "misc_model"
 "origin" "475.772 232.777 -5.80759"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 32
+// entity 28
 {
 "classname" "misc_model"
 "origin" "475.772 264.777 -5.80759"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 33
+// entity 29
 {
 "classname" "light"
 "origin" "-152 -680 232"
 "light" "500"
 }
-// entity 34
+// entity 30
 {
 "classname" "light"
 "origin" "-106.886 70.1792 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 35
+// entity 31
 {
 "classname" "light"
 "origin" "210.277 71.5426 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 36
+// entity 32
 {
 "classname" "light"
 "origin" "470.277 73.5426 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 37
+// entity 33
 {
 "classname" "light"
 "origin" "150.299 -826.749 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 38
+// entity 34
 {
 "classname" "light"
 "origin" "467.466 -825.385 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 39
+// entity 35
 {
 "classname" "light"
 "origin" "727.466 -823.385 293.051"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 40
+// entity 36
 {
 "classname" "misc_model"
 "origin" "-238.839 89.3903 -5.80759"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 41
+// entity 37
 {
 "classname" "misc_model"
 "origin" "-206.84 73.3901 -5.80759"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -90 0"
 }
-// entity 42
-{
-"classname" "misc_model"
-"origin" "107.537 -685.937 16"
-"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
-"angles" "0 -90 0"
-}
-// entity 43
-{
-"classname" "misc_model"
-"origin" "139.538 -701.937 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
-"angles" "0 -90 0"
-}
-// entity 44
-{
-"classname" "misc_model"
-"origin" "98.356 -884.541 16"
-"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
-"angles" "0 -90 0"
-}
-// entity 45
-{
-"classname" "misc_model"
-"origin" "130.357 -900.541 16"
-"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
-"angles" "0 -90 0"
-}
-// entity 46
+// entity 38
 {
 "classname" "light"
 "origin" "1065.61 -402.171 293.051"
 "light" "500"
 "_color" "1 1 1"
 }
-// entity 47
+// entity 39
 {
 "classname" "light"
 "origin" "1239.91 732.925 293.051"
 "light" "500"
 "_color" "1 1 1"
 }
-// entity 48
+// entity 40
 {
 "classname" "light"
 "origin" "1303.2 145.252 293.051"
 "light" "500"
 "_color" "1 1 1"
 }
-// entity 49
+// entity 41
 {
 "classname" "misc_model"
 "origin" "759.592 346.987 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 50
+// entity 42
 {
 "classname" "misc_model"
 "origin" "770.967 601.289 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 51
+// entity 43
 {
 "classname" "misc_model"
 "origin" "756.17 866.486 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 52
+// entity 44
 {
 "classname" "misc_model"
 "origin" "1938.63 273.728 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 53
+// entity 45
 {
 "classname" "misc_model"
 "origin" "1950 528.039 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 54
+// entity 46
 {
 "classname" "misc_model"
 "origin" "1935.2 793.236 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 55
+// entity 47
 {
 "classname" "misc_model"
 "origin" "1375.91 364.974 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 56
+// entity 48
 {
 "classname" "misc_model"
 "origin" "1387.28 619.285 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 57
+// entity 49
 {
 "classname" "misc_model"
 "origin" "1372.48 884.482 10.9233"
 "model" "models/zone1_vegas/palm2/palm2.md3"
 }
-// entity 58
+// entity 50
 {
 "classname" "light"
 "origin" "481.816 -182.183 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 59
+// entity 51
 {
 "classname" "light"
 "origin" "221.816 -184.183 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 60
+// entity 52
 {
 "classname" "light"
 "origin" "-95.3432 -185.546 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 61
+// entity 53
 {
 "classname" "light"
 "origin" "-102.844 -504.573 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 62
+// entity 54
 {
 "classname" "light"
 "origin" "223.13 -519.203 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 63
+// entity 55
 {
 "classname" "light"
 "origin" "734.13 -509.203 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 64
+// entity 56
 {
 "classname" "light"
 "origin" "483.13 -517.203 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 65
+// entity 57
 {
 "classname" "light"
 "origin" "732.816 -174.183 181.612"
 "light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 66
+// entity 58
 {
 "classname" "misc_model"
 "origin" "382.424 -85.2993 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 67
+// entity 59
 {
 "classname" "misc_model"
 "origin" "382.424 -117.303 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 68
+// entity 60
 {
 "classname" "misc_model"
 "origin" "286.426 -133.303 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 69
+// entity 61
 {
 "classname" "misc_model"
 "origin" "286.426 -101.304 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 70
+// entity 62
 {
 "classname" "misc_model"
 "origin" "206.425 -101.304 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 71
+// entity 63
 {
 "classname" "misc_model"
 "origin" "206.425 -133.303 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 72
+// entity 64
 {
 "classname" "misc_model"
 "origin" "126.423 -101.304 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 73
+// entity 65
 {
 "classname" "misc_model"
 "origin" "110.423 -133.303 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 74
+// entity 66
 {
 "classname" "misc_model"
 "origin" "365.965 -48.2558 -8.8175"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 75
+// entity 67
 {
 "classname" "misc_model"
 "origin" "379.602 0.971961 -6.04258"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 76
+// entity 68
 {
 "classname" "misc_model"
 "origin" "280.063 -34.8846 -8.8175"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 77
+// entity 69
 {
 "classname" "misc_model"
 "origin" "293.701 14.3432 -6.04258"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 78
+// entity 70
 {
 "classname" "misc_model"
 "origin" "163.15 -34.4776 -8.8175"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 79
+// entity 71
 {
 "classname" "misc_model"
 "origin" "176.787 14.7502 -6.04258"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 80
+// entity 72
 {
 "classname" "misc_model"
 "origin" "59.3545 -29.0903 -8.8175"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 81
+// entity 73
 {
 "classname" "misc_model"
 "origin" "72.9903 20.1375 -6.04258"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 82
+// entity 74
 {
 "classname" "light"
 "origin" "82.3272 208.728 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 83
+// entity 75
 {
 "classname" "light"
 "origin" "342.335 210.728 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 84
+// entity 76
 {
 "classname" "light"
 "origin" "-163.744 211.253 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 85
+// entity 77
 {
 "classname" "light"
 "origin" "589.8 203.918 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 86
+// entity 78
 {
 "classname" "misc_model"
 "origin" "907.104 -187.081 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 87
+// entity 79
 {
 "classname" "misc_model"
 "origin" "891.104 -219.081 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 88
+// entity 80
 {
 "classname" "misc_model"
 "origin" "950.902 -593.916 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 89
+// entity 81
 {
 "classname" "misc_model"
 "origin" "966.406 -122.596 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 90
+// entity 82
 {
 "classname" "misc_model"
 "origin" "904.644 -55.1472 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 91
+// entity 83
 {
 "classname" "misc_model"
 "origin" "920.644 -23.1462 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 92
+// entity 84
 {
 "classname" "misc_model"
 "origin" "987.361 -613.194 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -90 0"
 }
-// entity 93
+// entity 85
 {
 "classname" "misc_model"
 "origin" "1074.83 -842.69 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 94
+// entity 86
 {
 "classname" "misc_model"
 "origin" "1058.83 -874.69 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 95
+// entity 87
 {
 "classname" "misc_model"
 "origin" "1187.97 -840.712 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 96
+// entity 88
 {
 "classname" "misc_model"
 "origin" "1171.97 -872.712 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 97
+// entity 89
 {
 "classname" "misc_model"
 "origin" "1264.34 -100.356 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 98
+// entity 90
 {
 "classname" "misc_model"
 "origin" "1296.34 -116.356 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 99
+// entity 91
 {
 "classname" "misc_model"
 "origin" "1325.96 -185.233 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -179 0"
 }
-// entity 100
+// entity 92
 {
 "classname" "misc_model"
 "origin" "1341.5 -153.01 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -179 0"
 }
-// entity 101
+// entity 93
 {
 "classname" "misc_model"
 "origin" "1403.24 -122.412 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -89 0"
 }
-// entity 102
+// entity 94
 {
 "classname" "misc_model"
 "origin" "1371.1 -106.687 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -89 0"
 }
-// entity 103
+// entity 95
 {
 "classname" "misc_model"
 "origin" "1348.31 -37.925 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -1 0"
 }
-// entity 104
+// entity 96
 {
 "classname" "misc_model"
 "origin" "1331.43 -69.4686 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -1 0"
 }
-// entity 105
+// entity 97
 {
 "classname" "misc_model"
 "origin" "1678.37 -32.5142 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -1 0"
 }
-// entity 106
+// entity 98
 {
 "classname" "misc_model"
 "origin" "1661.49 -64.0578 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -1 0"
 }
-// entity 107
+// entity 99
 {
 "classname" "misc_model"
 "origin" "1626.4 -110.946 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 108
+// entity 100
 {
 "classname" "misc_model"
 "origin" "1594.4 -94.9456 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 109
+// entity 101
 {
 "classname" "misc_model"
 "origin" "1671.56 -147.6 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -179 0"
 }
-// entity 110
+// entity 102
 {
 "classname" "misc_model"
 "origin" "1656.02 -179.823 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -179 0"
 }
-// entity 111
+// entity 103
 {
 "classname" "misc_model"
 "origin" "1701.16 -101.279 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -89 0"
 }
-// entity 112
+// entity 104
 {
 "classname" "misc_model"
 "origin" "1733.3 -117.002 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -89 0"
 }
-// entity 113
+// entity 105
 {
 "classname" "misc_model"
 "origin" "1287.36 -873.863 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 114
+// entity 106
 {
 "classname" "misc_model"
 "origin" "1303.36 -841.863 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 115
+// entity 107
 {
 "classname" "misc_model"
 "origin" "1383.85 -679.676 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 116
+// entity 108
 {
 "classname" "misc_model"
 "origin" "1399.85 -647.676 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 117
+// entity 109
 {
 "classname" "misc_model"
 "origin" "1499.24 -676.52 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 118
+// entity 110
 {
 "classname" "misc_model"
 "origin" "1515.24 -644.52 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 119
+// entity 111
 {
 "classname" "misc_model"
 "origin" "1617.52 -678.661 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 120
+// entity 112
 {
 "classname" "misc_model"
 "origin" "1633.52 -646.661 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 121
+// entity 113
 {
 "classname" "light"
 "origin" "1661.52 -452.809 293.051"
 "light" "500"
 "_color" "1 1 1"
 }
-// entity 122
+// entity 114
 {
 "classname" "light"
 "origin" "1915.06 104.614 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 123
+// entity 115
 {
 "classname" "light"
 "origin" "1917.51 -608.552 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 124
+// entity 116
 {
 "classname" "light"
 "origin" "1907.18 -282.863 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 125
+// entity 117
 {
 "classname" "misc_model"
 "origin" "1978.45 -154.651 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 126
+// entity 118
 {
 "classname" "misc_model"
 "origin" "1946.45 -138.651 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 127
+// entity 119
 {
 "classname" "misc_model"
 "origin" "1959.69 76.4357 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 128
+// entity 120
 {
 "classname" "misc_model"
 "origin" "1927.69 92.4354 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 129
+// entity 121
 {
 "classname" "misc_model"
 "origin" "1970.64 -580.267 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 130
+// entity 122
 {
 "classname" "misc_model"
 "origin" "1938.64 -564.267 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 131
+// entity 123
 {
 "classname" "misc_model"
 "origin" "1979.47 -854.323 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 132
+// entity 124
 {
 "classname" "misc_model"
 "origin" "1947.47 -838.323 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 133
+// entity 125
 {
 "classname" "misc_model"
 "origin" "1765.46 -868.003 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 134
+// entity 126
 {
 "classname" "misc_model"
 "origin" "1781.46 -836.003 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 135
+// entity 127
 {
 "classname" "misc_model"
 "origin" "914.317 -875.55 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 136
+// entity 128
 {
 "classname" "misc_model"
 "origin" "930.315 -843.55 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 137
+// entity 129
 {
 "classname" "light"
 "origin" "2118.67 -373.336 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 138
+// entity 130
 {
 "classname" "light"
 "origin" "2405.21 -348.234 147.376"
 "light" "150"
 "_color" "0.941176 0.933333 0.819608"
 }
-// entity 139
+// entity 131
 {
 "classname" "light"
 "origin" "2806.63 -355.879 147.376"
 "light" "150"
+"_color" "0.941176 0.933333 0.819608"
+}
+// entity 132
+{
+"classname" "misc_model"
+"origin" "130.87 -580.915 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 133
+{
+"classname" "misc_model"
+"origin" "114.871 -612.915 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 134
+{
+"classname" "misc_model"
+"origin" "222.231 -570.922 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 135
+{
+"classname" "misc_model"
+"origin" "206.232 -602.922 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 136
+{
+"classname" "misc_model"
+"origin" "321.919 -578.802 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 137
+{
+"classname" "misc_model"
+"origin" "305.92 -610.802 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 138
+{
+"classname" "misc_model"
+"origin" "635.173 -569.16 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 139
+{
+"classname" "misc_model"
+"origin" "619.174 -601.16 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 140
+{
+"classname" "misc_model"
+"origin" "713.815 -571.937 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 141
+{
+"classname" "misc_model"
+"origin" "697.815 -603.937 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 142
+{
+"classname" "misc_model"
+"origin" "808.273 -568.979 16"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+}
+// entity 143
+{
+"classname" "misc_model"
+"origin" "792.273 -600.979 16"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+}
+// entity 144
+{
+"classname" "misc_model"
+"origin" "303.896 -658.642 41.5203"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 177 0"
+}
+// entity 145
+{
+"classname" "misc_model"
+"origin" "286.931 -690.14 41.5203"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 177 0"
+}
+// entity 146
+{
+"classname" "misc_model"
+"origin" "227.13 -665.739 41.5203"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 177 0"
+}
+// entity 147
+{
+"classname" "misc_model"
+"origin" "210.163 -697.237 41.5203"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 177 0"
+}
+// entity 148
+{
+"classname" "misc_model"
+"origin" "138.815 -666.079 41.5203"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 177 0"
+}
+// entity 149
+{
+"classname" "misc_model"
+"origin" "121.851 -697.577 41.5203"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 177 0"
+}
+// entity 150
+{
+"classname" "misc_model"
+"origin" "751.766 -668.322 41.5203"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 -180 0"
+}
+// entity 151
+{
+"classname" "misc_model"
+"origin" "736.7 -700.772 41.5203"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 -180 0"
+}
+// entity 152
+{
+"classname" "misc_model"
+"origin" "635.416 -668.897 41.5203"
+"model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
+"angles" "0 -180 0"
+}
+// entity 153
+{
+"classname" "misc_model"
+"origin" "620.353 -701.347 41.5203"
+"model" "models/zone1_vegas/slotstool2/slotstool2.md3"
+"angles" "0 -180 0"
+}
+// entity 154
+{
+"classname" "light"
+"origin" "725.424 -1328.72 293.051"
+"light" "300"
+"_color" "0.941176 0.933333 0.819608"
+}
+// entity 155
+{
+"classname" "light"
+"origin" "148.255 -1332.08 293.051"
+"light" "300"
+"_color" "0.941176 0.933333 0.819608"
+}
+// entity 156
+{
+"classname" "light"
+"origin" "154.687 -2037.64 291.229"
+"light" "300"
+"_color" "0.941176 0.933333 0.819608"
+}
+// entity 157
+{
+"classname" "light"
+"origin" "471.857 -2036.28 291.229"
+"light" "300"
+"_color" "0.941176 0.933333 0.819608"
+}
+// entity 158
+{
+"classname" "light"
+"origin" "731.867 -2034.28 291.229"
+"light" "300"
 "_color" "0.941176 0.933333 0.819608"
 }
