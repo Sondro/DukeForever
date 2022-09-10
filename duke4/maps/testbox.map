@@ -242,599 +242,583 @@
 // entity 26
 {
 "classname" "light"
-"origin" "376 120 168"
+"origin" "-24 24 264"
+"light" "500"
 }
 // entity 27
-{
-"classname" "light"
-"origin" "-216 -424 136"
-}
-// entity 28
-{
-"classname" "light"
-"origin" "-152 8 200"
-}
-// entity 29
 {
 "classname" "misc_model"
 "origin" "352 -80 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 30
-{
-"classname" "light"
-"origin" "328 -408 136"
-}
-// entity 31
+// entity 28
 {
 "classname" "misc_model"
 "origin" "-208 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 32
+// entity 29
 {
 "classname" "misc_model"
 "origin" "-208 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 33
+// entity 30
 {
 "classname" "misc_model"
 "origin" "-48 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 34
+// entity 31
 {
 "classname" "misc_model"
 "origin" "-48 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 35
+// entity 32
 {
 "classname" "misc_model"
 "origin" "112 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 36
+// entity 33
 {
 "classname" "misc_model"
 "origin" "112 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 37
+// entity 34
 {
 "classname" "misc_model"
 "origin" "288 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 38
+// entity 35
 {
 "classname" "misc_model"
 "origin" "288 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 39
+// entity 36
 {
 "classname" "misc_model"
 "origin" "400 -480 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 40
+// entity 37
 {
 "classname" "misc_model"
 "origin" "432 -496 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -90 0"
 }
-// entity 41
+// entity 38
 {
 "classname" "misc_model"
 "origin" "352 -560 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 42
+// entity 39
 {
 "classname" "misc_model"
 "origin" "368 -528 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 43
+// entity 40
 {
 "classname" "misc_model"
 "origin" "320 -496 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 44
+// entity 41
 {
 "classname" "misc_model"
 "origin" "288 -480 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 45
+// entity 42
 {
 "classname" "misc_model"
 "origin" "352 -448 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 46
+// entity 43
 {
 "classname" "misc_model"
 "origin" "368 -416 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 47
+// entity 44
 {
 "classname" "misc_model"
 "origin" "768 -496 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 48
+// entity 45
 {
 "classname" "misc_model"
 "origin" "800 -512 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -90 0"
 }
-// entity 49
+// entity 46
 {
 "classname" "misc_model"
 "origin" "720 -576 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 50
+// entity 47
 {
 "classname" "misc_model"
 "origin" "736 -544 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 51
+// entity 48
 {
 "classname" "misc_model"
 "origin" "688 -512 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 52
+// entity 49
 {
 "classname" "misc_model"
 "origin" "656 -496 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 53
+// entity 50
 {
 "classname" "misc_model"
 "origin" "720 -464 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 54
+// entity 51
 {
 "classname" "misc_model"
 "origin" "736 -432 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 55
+// entity 52
 {
 "classname" "misc_model"
 "origin" "752 -96 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 -90 0"
 }
-// entity 56
+// entity 53
 {
 "classname" "misc_model"
 "origin" "784 -112 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 -90 0"
 }
-// entity 57
+// entity 54
 {
 "classname" "misc_model"
 "origin" "704 -176 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 58
+// entity 55
 {
 "classname" "misc_model"
 "origin" "720 -144 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 59
+// entity 56
 {
 "classname" "misc_model"
 "origin" "672 -112 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 60
+// entity 57
 {
 "classname" "misc_model"
 "origin" "640 -96 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 61
+// entity 58
 {
 "classname" "misc_model"
 "origin" "704 -64 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 62
+// entity 59
 {
 "classname" "misc_model"
 "origin" "720 -32 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 63
-{
-"classname" "light"
-"origin" "536 232 120"
-}
-// entity 64
-{
-"classname" "light"
-"origin" "760 40 120"
-}
-// entity 65
-{
-"classname" "light"
-"origin" "616 -744 88"
-}
-// entity 66
-{
-"classname" "light"
-"origin" "824 -392 88"
-}
-// entity 67
+// entity 60
 {
 "classname" "misc_model"
 "origin" "48 -128 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 68
+// entity 61
 {
 "classname" "misc_model"
 "origin" "64 -96 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 69
+// entity 62
 {
 "classname" "misc_model"
 "origin" "-32 -96 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 70
+// entity 63
 {
 "classname" "misc_model"
 "origin" "-32 -128 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 71
+// entity 64
 {
 "classname" "misc_model"
 "origin" "-112 -128 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 72
+// entity 65
 {
 "classname" "misc_model"
 "origin" "-112 -96 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 73
+// entity 66
 {
 "classname" "misc_model"
 "origin" "-208 -144 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 74
+// entity 67
 {
 "classname" "misc_model"
 "origin" "-208 -112 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 75
+// entity 68
 {
 "classname" "misc_model"
 "origin" "64 -176 32"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 76
+// entity 69
 {
 "classname" "misc_model"
 "origin" "64 -208 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 77
+// entity 70
 {
 "classname" "misc_model"
 "origin" "-32 -192 32"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 78
+// entity 71
 {
 "classname" "misc_model"
 "origin" "-32 -224 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 79
+// entity 72
 {
 "classname" "misc_model"
 "origin" "-112 -192 32"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 80
+// entity 73
 {
 "classname" "misc_model"
 "origin" "-112 -224 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 81
+// entity 74
 {
 "classname" "misc_model"
 "origin" "-192 -192 32"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 82
+// entity 75
 {
 "classname" "misc_model"
 "origin" "-208 -224 32"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 83
+// entity 76
 {
 "classname" "misc_model"
 "origin" "48 -592 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 84
+// entity 77
 {
 "classname" "misc_model"
 "origin" "64 -560 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 85
+// entity 78
 {
 "classname" "misc_model"
 "origin" "-32 -560 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 86
+// entity 79
 {
 "classname" "misc_model"
 "origin" "-32 -592 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 87
+// entity 80
 {
 "classname" "misc_model"
 "origin" "-112 -592 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 88
+// entity 81
 {
 "classname" "misc_model"
 "origin" "-112 -560 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 89
+// entity 82
 {
 "classname" "misc_model"
 "origin" "-208 -608 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 }
-// entity 90
+// entity 83
 {
 "classname" "misc_model"
 "origin" "-208 -576 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 }
-// entity 91
+// entity 84
 {
 "classname" "misc_model"
 "origin" "64 -640 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 92
+// entity 85
 {
 "classname" "misc_model"
 "origin" "64 -672 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 93
+// entity 86
 {
 "classname" "misc_model"
 "origin" "-32 -656 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 94
+// entity 87
 {
 "classname" "misc_model"
 "origin" "-32 -688 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 95
+// entity 88
 {
 "classname" "misc_model"
 "origin" "-112 -656 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 96
+// entity 89
 {
 "classname" "misc_model"
 "origin" "-112 -688 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 97
+// entity 90
 {
 "classname" "misc_model"
 "origin" "-192 -656 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 98
+// entity 91
 {
 "classname" "misc_model"
 "origin" "-208 -688 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 99
+// entity 92
 {
 "classname" "misc_model"
 "origin" "640 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 100
+// entity 93
 {
 "classname" "misc_model"
 "origin" "640 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 101
+// entity 94
 {
 "classname" "misc_model"
 "origin" "464 192 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 102
+// entity 95
 {
 "classname" "misc_model"
 "origin" "464 224 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 103
+// entity 96
 {
 "classname" "misc_model"
 "origin" "816 208 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 180 0"
 }
-// entity 104
+// entity 97
 {
 "classname" "misc_model"
 "origin" "816 176 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 180 0"
 }
-// entity 105
+// entity 98
 {
 "classname" "misc_model"
 "origin" "896 80 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 106
+// entity 99
 {
 "classname" "misc_model"
 "origin" "864 96 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 107
+// entity 100
 {
 "classname" "misc_model"
 "origin" "912 -32 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 108
+// entity 101
 {
 "classname" "misc_model"
 "origin" "880 -16 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 109
+// entity 102
 {
 "classname" "misc_model"
 "origin" "912 -160 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 110
+// entity 103
 {
 "classname" "misc_model"
 "origin" "880 -144 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 111
+// entity 104
 {
 "classname" "misc_model"
 "origin" "912 -304 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 112
+// entity 105
 {
 "classname" "misc_model"
 "origin" "880 -288 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 113
+// entity 106
 {
 "classname" "misc_model"
 "origin" "912 -480 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 114
+// entity 107
 {
 "classname" "misc_model"
 "origin" "880 -464 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
 }
-// entity 115
+// entity 108
 {
 "classname" "misc_model"
 "origin" "912 -656 16"
 "model" "models/zone1_new_vegas/slotmachine1/slotmachine1.md3"
 "angles" "0 90 0"
 }
-// entity 116
+// entity 109
 {
 "classname" "misc_model"
 "origin" "880 -640 16"
 "model" "models/zone1_vegas/slotstool2/slotstool2.md3"
 "angles" "0 90 0"
+}
+// entity 110
+{
+"classname" "light"
+"origin" "504 40 248"
+"light" "500"
+}
+// entity 111
+{
+"classname" "light"
+"origin" "696 -632 200"
+"light" "500"
+}
+// entity 112
+{
+"classname" "light"
+"origin" "-152 -680 232"
+"light" "500"
 }

@@ -233,7 +233,7 @@ float getFogFactor(float d, float FogMax, float FogMin)
 		   //else
 		   {
 				//gOutput[launchIndex].xyz = lerp(gOutput[launchIndex], float4(payload.colorAndDistance.rgb, 1.f), 0.3);
-				float reflectValue = ((payload.colorAndDistance.r + payload.colorAndDistance.g + payload.colorAndDistance.b) / 3);
+				float reflectValue = ((gLightOutput[launchIndex].r + gLightOutput[launchIndex].g + gLightOutput[launchIndex].b) / 3);
 				gLightOutput[launchIndex].xyz = lerp(gLightOutput[launchIndex].xyz, payload.colorAndDistance.rgb, reflectValue);
 				gOutput[launchIndex].xyz.xyz = lerp(gOutput[launchIndex].xyz, payload.lightColor.rgb, reflectValue);
 		   }
