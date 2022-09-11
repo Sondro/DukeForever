@@ -210,7 +210,7 @@ static cvarTable_t cvarTable[] = { // bk001129
 	{ &cg_drawIcons, "cg_drawIcons", "1", CVAR_ARCHIVE  },
 	{ &cg_drawAmmoWarning, "cg_drawAmmoWarning", "1", CVAR_ARCHIVE  },
 	{ &cg_drawAttacker, "cg_drawAttacker", "1", CVAR_ARCHIVE  },
-	{ &cg_drawCrosshair, "cg_drawCrosshair", "4", CVAR_ARCHIVE },
+	{ &cg_drawCrosshair, "cg_drawCrosshair", "10", CVAR_ARCHIVE },
 	{ &cg_drawCrosshairNames, "cg_drawCrosshairNames", "1", CVAR_ARCHIVE },
 	{ &cg_drawRewards, "cg_drawRewards", "1", CVAR_ARCHIVE },
 	{ &cg_crosshairSize, "cg_crosshairSize", "24", CVAR_ARCHIVE },
@@ -759,17 +759,17 @@ static void CG_RegisterGraphics( void ) {
 	int			i;
 	char		items[MAX_ITEMS+1];
 	static char		*sb_nums[11] = {
-		"gfx/num_0.tga",
-		"gfx/num_1.tga",
-		"gfx/num_2.tga",
-		"gfx/num_3.tga",
-		"gfx/num_4.tga",
-		"gfx/num_5.tga",
-		"gfx/num_6.tga",
-		"gfx/num_7.tga",
-		"gfx/num_8.tga",
-		"gfx/num_9.tga",
-		"gfx/num_minus.tga",
+		"ui/textures/huddigit_0.tga",
+		"ui/textures/huddigit_1.tga",
+		"ui/textures/huddigit_2.tga",
+		"ui/textures/huddigit_3.tga",
+		"ui/textures/huddigit_4.tga",
+		"ui/textures/huddigit_5.tga",
+		"ui/textures/huddigit_6.tga",
+		"ui/textures/huddigit_7.tga",
+		"ui/textures/huddigit_8.tga",
+		"ui/textures/huddigit_9.tga",
+		"ui/textures/num_minus.tga",
 	};
 
 	// clear any references to old media
@@ -854,7 +854,7 @@ static void CG_RegisterGraphics( void ) {
 	cgs.media.selectShader = engine->renderer->RegisterShader( "gfx/2d/select" );
 
 	for ( i = 0 ; i < NUM_CROSSHAIRS ; i++ ) {
-		cgs.media.crosshairShader[i] = engine->renderer->RegisterShader( va("gfx/2d/crosshair%c", 'a'+i) );
+		cgs.media.crosshairShader[i] = engine->renderer->RegisterShader( va("ui/textures/crosshair%dbc.tga", i + 1) );
 	}
 
 	cgs.media.backTileShader = engine->renderer->RegisterShader( "gfx/2d/backtile" );

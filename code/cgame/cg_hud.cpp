@@ -311,10 +311,77 @@ static void CG_DrawCenterString(void) {
 	engine->renderer->SetColor(NULL);
 }
 
+/*
+=================
+CG_DrawCrosshair
+=================
+*/
+static void CG_DrawCrosshair(void) {
+	float		w, h;
+	qhandle_t	hShader;
+	float		f;
+	float		x, y;
+	int			ca;
+
+	if (!cg_drawCrosshair.integer) {
+		return;
+	}
+
+	if (cg.snap->ps.persistant[PERS_TEAM] == TEAM_SPECTATOR) {
+		return;
+	}
+
+	if (cg.renderingThirdPerson) {
+		return;
+	}
+
+	w = h = cg_crosshairSize.value;
+
+	// pulse the size of the crosshair when picking up items
+	f = cg.time - cg.itemPickupBlendTime;
+	if (f > 0 && f < ITEM_BLOB_TIME) {
+		f /= ITEM_BLOB_TIME;
+		w *= (1 + f);
+		h *= (1 + f);
+	}
+
+	x = cg_crosshairX.integer;
+	y = cg_crosshairY.integer;
+	CG_AdjustFrom640(&x, &y, &w, &h);
+
+	ca = cg_drawCrosshair.integer;
+	if (ca < 0) {
+		ca = 0;
+	}
+	hShader = cgs.media.crosshairShader[ca % NUM_CROSSHAIRS];
+
+	for (int i = 0; i < 16; i++)
+	{
+		engine->renderer->DrawStretchPic(x + cg.refdef.x + 0.5 * (cg.refdef.width - w),
+			y + cg.refdef.y + 0.5 * (cg.refdef.height - h),
+			w, h, 0, 0, 1, 1, hShader);
+	}
+}
+
 
 #if 1
 void CG_DrawStatusBar(void) {
+	playerState_t* ps;
+	centity_t* cent;
+
+	cent = &cg_entities[cg.snap->ps.clientNum];
+	ps = &cg.snap->ps;
+
 	CG_DrawPic(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, cgs.media.hudBackgroundShader);
+
+	if (cent->currentState.weapon) {
+		CG_DrawField(730, SCREEN_HEIGHT - 55, 3, ps->ammo[cent->currentState.weapon]);
+	}
+
+	// stretch the health up when taking damage
+	CG_DrawField(213, SCREEN_HEIGHT - 55, 3, ps->stats[STAT_HEALTH]);
+
+	CG_DrawCrosshair();
 }
 #else
 void CG_DrawStatusBar(void) {

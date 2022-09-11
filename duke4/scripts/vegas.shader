@@ -1,3 +1,12 @@
+textures/vegas/ladykiller1sah
+{
+	reflect
+	emissive
+	{
+		map textures/vegas/ladykiller1sah.tga
+	}
+}
+
 textures/vegas/ladyfloout3c
 {
 	{

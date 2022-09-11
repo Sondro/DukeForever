@@ -530,19 +530,19 @@ float packNormal(float3 color) {
 	emissive = 2;
   }  
 
-  if(BTriVertex[vertId + 0].st.z >= 0)
-  {
-	for(int i = 4; i < 9; i++)
-	{
-		uint2 pixIdx = DispatchRaysIndex().xy;
-		uint randSeed = initRand( pixIdx.x + pixIdx.y * 1920, 0 );
-		int r = length(float3(worldOrigin.x + worldOrigin.y, worldOrigin.x + worldOrigin.y, worldOrigin.x + worldOrigin.y)) * i;
-		float3 worldDir = getCosHemisphereSample(r, normal);
-		if(IsLightShadowed(worldOrigin, worldDir, 5 * ( i * 0.1), normal)) {
-			ndotl *= 0.01;
-		}
-	}
-  }
+//  if(BTriVertex[vertId + 0].st.z >= 0)
+//  {
+//	for(int i = 4; i < 9; i++)
+//	{
+//		uint2 pixIdx = DispatchRaysIndex().xy;
+//		uint randSeed = initRand( pixIdx.x + pixIdx.y * 1920, 0 );
+//		int r = length(float3(worldOrigin.x + worldOrigin.y, worldOrigin.x + worldOrigin.y, worldOrigin.x + worldOrigin.y)) * i;
+//		float3 worldDir = getCosHemisphereSample(r, normal);
+//		if(IsLightShadowed(worldOrigin, worldDir, 5 * ( i * 0.1), normal)) {
+//			ndotl *= 0.01;
+//		}
+//	}
+//  }
 
   
 
